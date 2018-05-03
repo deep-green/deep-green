@@ -25,7 +25,7 @@
 
 
 ![schachnotation](./images/schachnotation.jpg)
-
+![schachnotation](./images/schachnotation_klein.jpg)
 
 ### Backend
 

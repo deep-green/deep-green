@@ -7,7 +7,7 @@ Als Spieler möchte ich durch eine Spracheingabe ein Spiel starten können. (Mus
 
 Als Spieler möchte ich durch eine Spracheingabe beim Starten eines neuen Spieles wählen können, ob der Gegner eine KI oder ein Mensch ist. (Must)
 
-Als Spieler mächte ich durch eine Sprachausgabe hören, ob mein Zug gültig ist. (Must)
+Als Spieler möchte ich durch eine Sprachausgabe hören, ob mein Zug gültig ist. (Must)
 
 Als Spieler möchte ich durch eine Sprachausgabe hören, welchen Zug der Gegner gemacht hat. (Must)
 

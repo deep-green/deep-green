@@ -20,7 +20,6 @@ __Nicht Funktional:__
 
 ## 2 User Stories
 ### 2.1 Sprachsteuerung
-# User Stories - Sprachsteuerung
 Als Spieler möchte ich durch eine Spracheingabe einen Spielzug machen. (Must)
 
 Als Spieler möchte ich durch eine Spracheingabe das Spiel beenden können. (Must)

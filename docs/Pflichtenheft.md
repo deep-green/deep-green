@@ -4,6 +4,9 @@
 ## User-Stories
 
 ### Bildverarbeitung
+- Test
+- Test2
+- Test3
 
 -Als Benutzer möchte ich, dass aus einer Fotografie eines realen Schach- oder Damespiels zuverlässig die Spielsituation erkannt wird, damit ich ohne umfangreiche Korrekturen mit dem Spiel fortfahren kann.
 

@@ -9,7 +9,7 @@ Schwierigkeitsgraden einstellen.
 
 __Möglichen Schwierigkeitsgrade:__ 
 * Leicht
-* Medium
+* Mittel
 * Hart
 
 

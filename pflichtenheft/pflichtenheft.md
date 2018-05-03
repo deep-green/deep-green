@@ -1,5 +1,9 @@
 # Pflichtenheft
 
+## textliche Anforderungsanalyse
+
+
+
 ## User-Stories
 
 ### Frontend

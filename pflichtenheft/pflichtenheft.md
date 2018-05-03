@@ -24,7 +24,7 @@
 | Bilderkennung - Korrektur  |Spieler| dass die Korrektur einer erkannten Spielsituation leicht möglich ist|damit ich sofort darauf reagieren kann| eine einfache Korrektur der erkannten Situation leicht möglich ist | Must
 
 
-![schachnotation](./pflichtenheft/images/schachnotation.png)
+![schachnotation](./pflichtenheft/images/schachnotation.jpg)
 
 
 ### Backend

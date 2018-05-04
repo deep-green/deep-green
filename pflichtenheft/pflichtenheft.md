@@ -89,7 +89,7 @@ __Nicht Funktional:__
 | Spielstart durchsagen | Spieler | durch eine Sprachausgabe hören, dass mein Spiel begonnen hat | das Spiel beginnen kann | eine Durchhsage den Spielstart bestimmt | Can
 | Gewinner durchsagen | Spieler | durch eine Sprachausgabe hören, wer gewonnen hat | ich über den Ausgang den Spiels bescheid weiß | eine Durchsage den Gewinner bestimmt | Must
 
-#### User Stories - Künstliche Intelligenz
+#### Künstliche Intelligenz
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------

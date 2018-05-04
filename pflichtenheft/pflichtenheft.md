@@ -86,3 +86,8 @@ __Nicht Funktional:__
 
 ||Spieler|durch eine Sprachausgabe hören, wer gewonnen hat||| Should
 
+## Mock Ups
+![Desktop](./images/mockups/DesktopMockups.png "Desktop")
+![Mobile](./images/mockups/MobilpMockups.png "Mobile")
+
+

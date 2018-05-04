@@ -50,5 +50,23 @@ __Nicht Funktional:__
 #### Backend
 
 #### Sprachsteuerung
+| **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
+|:-----|:----------:|:-------------------|:-------------|:---------|:----------------
+||Spieler|durch eine Spracheingabe einen Spielzug machen||| Must
 
+||Spieler|durch eine Spracheingabe das Spiel beenden können||| Must
+
+||Spieler|durch eine Spracheingabe ein Spiel starten können||| Must
+
+||Spieler|durch eine Spracheingabe beim Starten eines neuen Spieles wählen können, ob der Gegner eine KI oder ein Mensch ist||| Must
+
+||Spieler|durch eine Sprachausgabe hören, ob mein Zug gültig ist||| Must
+
+||Spieler|durch eine Sprachausgabe hören, welchen Zug der Gegner gemacht hat||| Must
+
+||Spieler|durch eine Sprachausgabe hören, welcher Spieler am Zug ist||| Must
+
+||Spieler|durch eine Sprachausgabe hören, dass mein Spiel begonnen hat||| Can
+
+||Spieler|durch eine Sprachausgabe hören, wer gewonnen hat||| Should
 

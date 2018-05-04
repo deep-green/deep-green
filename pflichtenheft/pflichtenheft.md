@@ -14,6 +14,10 @@
 * Es gibt die Möglichkeit, sich zu registrieren oder als Gastspieler an einem Spiel teilzunehmen.
 * Für registrierte Spieler gibt es ein System, das gleichstarke Spieler gegeneinander spielen lässt.
 
+## Systemarchitekturdiagramm
+
+![Systemarchitektur](./images/sysArch.png "Systemarchitektur")
+
 ## Anforderungen
 
 #### __Muss__

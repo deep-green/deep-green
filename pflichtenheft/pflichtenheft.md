@@ -4,18 +4,37 @@
 
 ### Beschreibung
 
-- Mit Hilfe von Deep Green kann man Brettspiele (z.B. Schach, Dame etc.) konfigurieren und ausführen und als Spieler oder Zuschauer teilnehmen.
-- Es ist möglich, sowohl gegen einen realen Spieler, als auch gegen eine KI zu spielen.
-- Die Bedienung des Spiels ist über diverse Eingabegeräte (Smartphones, Desktop-PCs, Spracheingabe z.B. Google Home) möglich.
-- Die initiale Spielsituation auf den Spielflächen kann über Kamera eingelesen werden.
-- Die Darstellung für die Spieler und Zuschauer des Spiels findet sowohl über Display-Geräte (das umfasst auch VR), als auch über Audio statt.
-- Es gibt die Möglichkeit, Zuschauer zuzulassen, bzw. als Zuschauer ein Spiel zu beobachten.
-- Es gibt die Möglichkeit, sich zu registrieren oder als Gastspieler an einem Spiel teilzunehmen.
-- Für registrierte Spieler gibt es ein System, das gleichstarke Spieler gegeneinander spielen lässt.
+* Mit Hilfe von Deep Green kann man Brettspiele (z.B. Schach, Dame etc.) konfigurieren und ausführen und als Spieler oder Zuschauer teilnehmen.
+* Es ist möglich, sowohl gegen einen realen Spieler, als auch gegen eine KI zu spielen.
+* Die Bedienung des Spiels ist über diverse Eingabegeräte (Smartphones, Desktop-PCs, Spracheingabe z.B. Google Home) möglich.
+* Die initiale Spielsituation auf den Spielflächen kann über Kamera eingelesen werden.
+* Die Darstellung für die Spieler und Zuschauer des Spiels findet sowohl über Display-Geräte (das umfasst auch VR), als auch über Audio statt.
+* Es gibt die Möglichkeit, Zuschauer zuzulassen, bzw. als Zuschauer ein Spiel zu beobachten.
+* Es gibt die Möglichkeit, sich zu registrieren oder als Gastspieler an einem Spiel teilzunehmen.
+* Für registrierte Spieler gibt es ein System, das gleichstarke Spieler gegeneinander spielen lässt.
+
+## Anforderungen
+
+#### __Muss__
+__Funktional:__
+* Benutzer kann Schach spielen
+* Gegen Menschen spielbar
+* Gegen KI spielbar
+* Über Desktop spielbar
+* Über Smartphone spielbar
+* Über Voice Assistant spielbar
+* Benutzer kann sich registrieren
+* Als Gast spielbar
+
+__Nicht Funktional:__
+* Kamera kann initiale Spielsituation erstellen
+
+#### __Optional__
+* Benutzer kann Spielen zusehen
 
 ## User-Stories
 
-### Frontend
+#### Frontend
 
 #### Bilderkennung
 
@@ -28,5 +47,8 @@
 
 ![schachnotation](./images/schachnotation.jpg "Schachnotation")
 
-### Backend
+#### Backend
+
+#### Sprachsteuerung
+
 

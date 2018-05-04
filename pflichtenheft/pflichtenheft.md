@@ -1,18 +1,18 @@
 
 # Pflichtenheft
 
-## textliche Anforderungsanalyse
+## Textliche Anforderungsanalyse
 
 ### Beschreibung
 
-* Mit Hilfe von Deep Green kann man Brettspiele (z.B. Schach, Dame etc.) konfigurieren und ausführen und als Spieler oder Zuschauer teilnehmen.
-* Es ist möglich, sowohl gegen einen realen Spieler, als auch gegen eine KI zu spielen.
-* Die Bedienung des Spiels ist über diverse Eingabegeräte (Smartphones, Desktop-PCs, Spracheingabe z.B. Google Home) möglich.
-* Die initiale Spielsituation auf den Spielflächen kann über Kamera eingelesen werden.
-* Die Darstellung für die Spieler und Zuschauer des Spiels findet sowohl über Display-Geräte (das umfasst auch VR), als auch über Audio statt.
-* Es gibt die Möglichkeit, Zuschauer zuzulassen, bzw. als Zuschauer ein Spiel zu beobachten.
-* Es gibt die Möglichkeit, sich zu registrieren oder als Gastspieler an einem Spiel teilzunehmen.
-* Für registrierte Spieler gibt es ein System, das gleichstarke Spieler gegeneinander spielen lässt.
+* Mit Hilfe von Deep Green kann man Schach spielen oder Zuschauer teilnehmen
+* Es ist möglich, sowohl gegen einen realen Spieler, als auch gegen eine KI zu spielen
+* Die Bedienung des Spiels ist über diverse Eingabegeräte (Smartphones, Desktop-PCs, Spracheingabe z.B. Google Home) möglich
+* Die initiale Spielsituation auf den Spielflächen kann über Kamera eingelesen werden
+* Die Darstellung für die Spieler und Zuschauer des Spiels findet sowohl über Display-Geräte als auch über Audio statt
+* Es gibt die Möglichkeit, Zuschauer zuzulassen, bzw. als Zuschauer ein Spiel zu beobachten
+* Es gibt die Möglichkeit, sich zu registrieren oder als Gastspieler an einem Spiel teilzunehmen
+* Für registrierte Spieler gibt es ein System, das gleichstarke Spieler gegeneinander spielen lässt
 
 ## Anforderungen
 
@@ -66,25 +66,25 @@ __Nicht Funktional:__
 #### Backend
 
 #### Sprachsteuerung
-| **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
+| **Name**| **Als**... |   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
-||Spieler|durch eine Spracheingabe einen Spielzug machen||| Must
+| Spielzug ansagen | Spieler | durch eine Spracheingabe einen Spielzug machen | ich meinen Zug tätigen kann | mein Zug gemacht ist | Must
 
-||Spieler|durch eine Spracheingabe das Spiel beenden können||| Must
+| Spielende ansagen | Spieler | durch eine Spracheingabe das Spiel beenden können | wieder im Hauptmenü bin | das Spiel beendet ist | Must
 
-||Spieler|durch eine Spracheingabe ein Spiel starten können||| Must
+| Spielstart ansagen | Spieler | durch eine Spracheingabe ein Spiel starten können | eine Partie Schach spielen kann | ich in einer Schachpartie bin | Must
 
-||Spieler|durch eine Spracheingabe beim Starten eines neuen Spieles wählen können, ob der Gegner eine KI oder ein Mensch ist||| Must
+| Gegnertyp ansagen | Spieler | durch eine Spracheingabe beim Starten eines neuen Spieles wählen können, ob der Gegner eine KI oder ein Mensch ist | meinen Gegnertyp auswählen kann | ich eine Partie gegen den ausgewählten Gegnertyp spiele | Must
 
-||Spieler|durch eine Sprachausgabe hören, ob mein Zug gültig ist||| Must
+| Feedback durchsagen | Spieler | durch eine Sprachausgabe hören, ob mein Zug gültig ist | ich weiß, ob mein Zug beendet ist | ich Feedback über mein Spielzug durchgesagt bekomme | Must
 
-||Spieler|durch eine Sprachausgabe hören, welchen Zug der Gegner gemacht hat||| Must
+| Gegenerzug durchsagen | Spieler | durch eine Sprachausgabe hören, welchen Zug der Gegner gemacht hat | ich weiß, dass ich an der Reihe bin | ich den Gegnerzug durchgesagt bekomme | Must
 
-||Spieler|durch eine Sprachausgabe hören, welcher Spieler am Zug ist||| Must
+| Spielerzug durchhsagen | Spieler | durch eine Sprachausgabe hören, welcher Spieler am Zug ist | ich weiß, dass ich an der Reihe bin | eine Durchsage den Spielerzug bestimmt | Must
 
-||Spieler|durch eine Sprachausgabe hören, dass mein Spiel begonnen hat||| Can
+| Spielstart durchsagen | Spieler | durch eine Sprachausgabe hören, dass mein Spiel begonnen hat | das Spiel beginnen kann | eine Durchhsage den Spielstart bestimmt | Can
 
-||Spieler|durch eine Sprachausgabe hören, wer gewonnen hat||| Should
+| Gewinner durchsagen | Spieler | durch eine Sprachausgabe hören, wer gewonnen hat | ich über den Ausgang den Spiels bescheid weiß | eine Durchsage den Gewinner bestimmt | Should
 
 ## Mock Ups
 ![Desktop](./images/mockups/DesktopMockups.png "Desktop")

@@ -14,6 +14,10 @@
 * Es gibt die Möglichkeit, sich zu registrieren oder als Gastspieler an einem Spiel teilzunehmen
 * Für registrierte Spieler gibt es ein System, das gleichstarke Spieler gegeneinander spielen lässt
 
+## Systemarchitekturdiagramm
+
+![Systemarchitektur](./images/sysArch.png "Systemarchitektur")
+
 ## Anforderungen
 
 #### __Muss__
@@ -64,6 +68,13 @@ __Nicht Funktional:__
 ![schachnotation](./images/schachnotation.jpg "Schachnotation")
 
 #### Backend
+
+| **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
+|:-----|:----------:|:-------------------|:-------------|:---------|:----------------
+|Zug prüfen|Spieler|meine Züge auf Korrektheit geprüft werden|die Spielregeln des Spiels eingehalten werden|die Züge korrekt auf Gültigkeit geprüft werden| Must
+|Spielende prüfen|Spieler|die Spielsituation bewertet|das Ende des Spiels (Gewinn/Verlust) erkannt wird|das Spielende korrekt erkannt wird| Must
+|Frontend-Kommunikation 1|Frontend|Nachrichten an das Backend senden und von diesem empfangen|das Backend die Eingaben der Spieler erkennt und weitergibt|eine stabile Schnittstelle implementiert ist| Must
+
 
 #### Sprachsteuerung
 | **Name**| **Als**... |   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |

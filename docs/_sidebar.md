@@ -1,2 +1,2 @@
 * [Home](/)
-* [Pflichtenheft](Pflichtenheft.md)
+* [Pflichtenheft](/pflichtenheft/pflichtenheft.md)

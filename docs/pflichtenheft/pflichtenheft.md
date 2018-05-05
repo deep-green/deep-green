@@ -63,11 +63,11 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 #### Desktop
 
-![Desktop](./images/mockups/DesktopMockups.png "Desktop")
+![Desktop](/images/Mockups/DesktopMockups.png "Desktop")
 
 #### Mobil
 
-![Mobile](./images/mockups/MobilMockups.png "Mobile")
+![Mobile](/images/Mockups/MobilMockups.png "Mobile")
 
 ### 2.4 Anforderungen im Detail
 
@@ -100,7 +100,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 | Korrektur  |Spieler| dass die Korrektur einer erkannten Spielsituation leicht möglich ist|damit ich sofort darauf reagieren kann| eine einfache Korrektur der erkannten Situation leicht möglich ist | Must
 
 
-![schachnotation](./images/schachnotation.jpg "Schachnotation")
+![schachnotation](/images/schachnotation.jpg "Schachnotation")
 
 #### Backend
 
@@ -142,7 +142,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
     - Schnittstellenbeschreibung
     - Kommunikationsprotokolle, Datenformate
 
-![Systemarchitektur](./images/sysArch.png "Systemarchitektur")
+![Systemarchitektur](/images/sysArch.png "Systemarchitektur")
 
 ### 3.2 Softwarearchitektur
 

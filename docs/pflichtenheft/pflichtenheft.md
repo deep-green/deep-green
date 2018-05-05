@@ -1,27 +1,38 @@
+# Anforderungs- und Entwurfsspezifikation ("Pflichtenheft")
 
-# Pflichtenheft
+## Deep Green - Another Chess Game
 
-## Textliche Anforderungsanalyse
+### Beteiligte Autoren
 
-### Beschreibung
+* Tobias Koppmann
+ 
+## 1 Einführung
 
-* Mit Hilfe von Deep Green kann man Schach spielen oder Zuschauer teilnehmen
-* Es ist möglich, sowohl gegen einen realen Spieler, als auch gegen eine KI zu spielen
-* Die Bedienung des Spiels ist über diverse Eingabegeräte (Smartphones, Desktop-PCs, Spracheingabe z.B. Google Home) möglich
-* Die initiale Spielsituation auf den Spielflächen kann über Kamera eingelesen werden
-* Die Darstellung für die Spieler und Zuschauer des Spiels findet sowohl über Display-Geräte als auch über Audio statt
-* Es gibt die Möglichkeit, Zuschauer zuzulassen, bzw. als Zuschauer ein Spiel zu beobachten
-* Es gibt die Möglichkeit, sich zu registrieren oder als Gastspieler an einem Spiel teilzunehmen
-* Für registrierte Spieler gibt es ein System, das gleichstarke Spieler gegeneinander spielen lässt
+### 1.1 Beschreibung
 
-## Systemarchitekturdiagramm
+Deep Green - Another Chess Game
 
-![Systemarchitektur](./images/sysArch.png "Systemarchitektur")
+Die Software "Deep Green" lässt das klassische Schachspiel wieder aufleben.
+Dabei macht die Software es möglich, gegen menschliche und KI-Gegner anzutreten.
+Neben dem einfach zugänglichen schnellen Spiel, existiert auch eine Möglichkeit, über ein Benutzersystem erweiterte Funktionen zu nutzen.
+Zu den erweiterten Funktionen gehören zum Beispiel das speichern von Spielen, der Eintrag in einer Rangliste und die Nutzung eines Matchmaking-Systems bei der suche nach Online-Gegenspielern.
+Zusätzlich gibt es die Möglichkeit an Spielen als Zuschauer teilzunehmen.
+Unter Nutzung einer Cloud-Infrastruktur ist es möglich auf zahlreichen Endgeräten und zu jeder Zeit gegeneinander zu spielen.
+Unter anderem wird dabei neben visuellen Ein-/Ausgabegeräten auch Sprachein-/ausgabe für das Spiel mit dem eigenen, klassischen Spielbrett bereit gestellt.
+Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist mit Hilfe eines Foto-Uploads und darauf angewendeter Bilderkennung möglich.
 
-## Anforderungen
+### 1.2 Ziele
 
-#### __Muss__
-__Funktional:__
+    - Anwendungsbereiche, Motivation, Umfang, Marktanforderungen, Alleinstellungsmerkmale
+    - Informationen zu Zielbenutzergruppen und deren Merkmale (Bildung, Erfahrung, Sachkenntnis)
+    - Abgrenzung (Was ist das Softwaresystem _nicht_)
+
+## 2 Anforderungen
+
+### 2.1 Funktionale Anforderungen
+
+    - Use-Case Diagramme
+
 * Benutzer kann Schach spielen
 * Gegen Menschen spielbar
 * Gegen KI spielbar
@@ -31,13 +42,37 @@ __Funktional:__
 * Benutzer kann sich registrieren
 * Als Gast spielbar
 
-__Nicht Funktional:__
-* Kamera kann initiale Spielsituation erstellen
+### 2.2 Nicht-funktionale Anforderungen
 
-#### __Optional__
+* Kamera kann initiale Spielsituation erstellen
 * Benutzer kann Spielen zusehen
 
-## User-Stories
+#### 2.2.1 Rahmenbedingungen
+
+    - Normen, Standards, Protokolle, Hardware, externe Vorgaben
+
+#### 2.2.2 Betriebsbedingungen
+
+    - Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
+
+#### 2.2.3 Qualitätsmerkmale
+
+    - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
+
+### 2.3 Graphische Benutzerschnittstelle
+
+#### Desktop
+
+![Desktop](/images/Mockups/DesktopMockups.png "Desktop")
+
+#### Mobil
+
+![Mobile](/images/Mockups/MobilMockups.png "Mobile")
+
+### 2.4 Anforderungen im Detail
+
+    - User Stories mit Akzeptanzkritierien 
+    - Optional: Name (oder ID) und Priorität ("Muss", "Soll", "Kann")
 
 #### Frontend
 
@@ -65,7 +100,7 @@ __Nicht Funktional:__
 | Korrektur  |Spieler| dass die Korrektur einer erkannten Spielsituation leicht möglich ist|damit ich sofort darauf reagieren kann| eine einfache Korrektur der erkannten Situation leicht möglich ist | Must
 
 
-![schachnotation](./images/schachnotation.jpg "Schachnotation")
+![schachnotation](/images/schachnotation.jpg "Schachnotation")
 
 #### Backend
 
@@ -99,8 +134,59 @@ __Nicht Funktional:__
 | Schwierigkeitsgrad während eines Spiels | Spieler | während einer Partie gegen die KI den Schwierigkeitsgrad anpassen können | ich, wenn mir die KI zu stark ist, keine neue Partie anfangen muss um den Schwierigkeitsgrad zu verändern | während einer Partie eine Möglichkeit besteht die Schwierigkeit des KI-Gegners zu verändern | Can
 | Gegner wechseln | Spieler | eine Partie gegen die KI speichern können | ich die Partie zu einem anderen Zeitpunkt gegen einen "echten" Gegner weiterspielen kann | bei einer gespeicherten Partie das Gegenüber von KI zu "echtem" Gegner gewechselt werden kann | Should
 
-## Mock Ups
-![Desktop](./images/mockups/DesktopMockups.png "Desktop")
-![Mobile](./images/mockups/MobilpMockups.png "Mobile")
+## 3 Technische Beschreibung
 
+### 3.1 Systemübersicht
 
+    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
+    - Schnittstellenbeschreibung
+    - Kommunikationsprotokolle, Datenformate
+
+![Systemarchitektur](/images/sysArch.png "Systemarchitektur")
+
+### 3.2 Softwarearchitektur
+
+    - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
+
+### 3.3 Datenmodell
+
+    - Konzeptionelles Analyseklassendiagramm
+
+### 3.4 Abläufe
+
+    - Aktivitätsdiagramme für relevante Use Cases
+    - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+
+### 3.5 Entwurf
+
+    - Detaillierte UML-Diagramme für relevante Softwarebausteine
+
+## 4 Projektorganisation
+
+### 4.1 Annahmen
+
+    - Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
+    - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
+    - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
+    - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
+
+### 4.2 Verantwortlichkeiten
+
+    - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
+    - Rollendefinition und Zuordnung
+
+### 4.3 Grober Projektplan
+
+    - Meilensteine
+
+## 5 Anhänge
+
+### 5.1 Glossar
+
+    - Definitionen, Abkürzungen, Begriffe
+
+### 5.2 Referenzen
+
+    - Handbücher, Gesetze
+
+### 5.3 Index

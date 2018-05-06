@@ -5,7 +5,8 @@
 ### Beteiligte Autoren
 
 * Tobias Koppmann
- 
+* Marti Stuwe
+
 ## 1 Einführung
 
 ### 1.1 Beschreibung
@@ -15,7 +16,7 @@ Deep Green - Another Chess Game
 Die Software "Deep Green" lässt das klassische Schachspiel wieder aufleben.
 Dabei macht die Software es möglich, gegen menschliche und KI-Gegner anzutreten.
 Neben dem einfach zugänglichen schnellen Spiel, existiert auch eine Möglichkeit, über ein Benutzersystem erweiterte Funktionen zu nutzen.
-Zu den erweiterten Funktionen gehören zum Beispiel das speichern von Spielen, der Eintrag in einer Rangliste und die Nutzung eines Matchmaking-Systems bei der suche nach Online-Gegenspielern.
+Zu den erweiterten Funktionen gehören zum Beispiel das speichern von Spielen, der Eintrag in einer Rangliste und die Nutzung eines Matchmaking-Systems bei der Suche nach Online-Gegenspielern.
 Zusätzlich gibt es die Möglichkeit an Spielen als Zuschauer teilzunehmen.
 Unter Nutzung einer Cloud-Infrastruktur ist es möglich auf zahlreichen Endgeräten und zu jeder Zeit gegeneinander zu spielen.
 Unter anderem wird dabei neben visuellen Ein-/Ausgabegeräten auch Sprachein-/ausgabe für das Spiel mit dem eigenen, klassischen Spielbrett bereit gestellt.
@@ -71,7 +72,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ### 2.4 Anforderungen im Detail
 
-    - User Stories mit Akzeptanzkritierien 
+    - User Stories mit Akzeptanzkritierien
     - Optional: Name (oder ID) und Priorität ("Muss", "Soll", "Kann")
 
 #### Frontend
@@ -182,8 +183,32 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 ## 5 Anhänge
 
 ### 5.1 Glossar
-
     - Definitionen, Abkürzungen, Begriffe
+
+##### AWS
+Amazon Web Services, Cloud-Computing-Anbieter
+
+##### Gast
+Ein nicht registriertes Individuum, das an einer Partie teilhaben möchte.
+
+##### Gegnertyp
+Als Gegnertyp zählt entweder die KI oder ein Spieler.
+
+##### KI / AI
+Künstliche Intelligenz / Artificial Intelligence
+Teilgebiet der Informatik das sich mit der Automatisierung intelligenten Verhaltens und dem Maschinenlernen befasst.
+
+##### Matchmaking
+Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
+
+##### Spieler
+Ein Benutzer mit der Intention ein Spiel zu spielen.
+
+##### User / Benutzer
+Ein, bei Deep-Green registriertes, Individuum ohne die direkte Intention ein Spiel zu spielen.
+
+##### Zuschauer
+Ein Benutzer der das Spielgeschehen nur betrachten möchte.
 
 ### 5.2 Referenzen
 

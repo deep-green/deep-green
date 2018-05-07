@@ -5,6 +5,7 @@
 ### Beteiligte Autoren
 
 * Tobias Koppmann
+* Alexander Scharow
  
 ## 1 Einführung
 
@@ -48,10 +49,10 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 #### Hauptmenü
 ![usecase_hauptmenu](/images/usecases/deep-green_hauptmenu.png "Hauptmenü")
 
-### Im Spiel (ohne Sprachsteuerung)
+#### Im Spiel (ohne Sprachsteuerung)
 ![usecase_ingame](/images/usecases/deep-green_ingame.png "Im Spiel")
 
-### Im Spiel (Sprachsteuerung)
+#### Im Spiel (Sprachsteuerung)
 ![usecase_voice](/images/usecases/deep-green_ingameVoice.png "Sprachsteuerung")
 
 ### 2.2 Nicht-funktionale Anforderungen

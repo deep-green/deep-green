@@ -31,8 +31,6 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ### 2.1 Funktionale Anforderungen
 
-    - Use-Case Diagramme
-
 * Benutzer kann Schach spielen
 * Gegen Menschen spielbar
 * Gegen KI spielbar
@@ -41,6 +39,20 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 * Über Voice Assistant spielbar
 * Benutzer kann sich registrieren
 * Als Gast spielbar
+
+### Use Cases
+
+#### Startseite
+![usecase_start](/images/usecases/deep-green_start.png "Startseite")
+
+#### Hauptmenü
+![usecase_hauptmenu](/images/usecases/deep-green_hauptmenu.png "Hauptmenü")
+
+### Im Spiel (ohne Sprachsteuerung)
+![usecase_ingame](/images/usecases/deep-green_ingame.png "Im Spiel")
+
+### Im Spiel (Sprachsteuerung)
+![usecase_voice](/images/usecases/deep-green_ingameVoice.png "Sprachsteuerung")
 
 ### 2.2 Nicht-funktionale Anforderungen
 

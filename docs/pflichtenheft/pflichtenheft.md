@@ -5,8 +5,9 @@
 ### Beteiligte Autoren
 
 * Tobias Koppmann
+* Marti Stuwe
 * Alexander Scharow
- 
+
 ## 1 Einführung
 
 ### 1.1 Beschreibung
@@ -16,7 +17,7 @@ Deep Green - Another Chess Game
 Die Software "Deep Green" lässt das klassische Schachspiel wieder aufleben.
 Dabei macht die Software es möglich, gegen menschliche und KI-Gegner anzutreten.
 Neben dem einfach zugänglichen schnellen Spiel, existiert auch eine Möglichkeit, über ein Benutzersystem erweiterte Funktionen zu nutzen.
-Zu den erweiterten Funktionen gehören zum Beispiel das speichern von Spielen, der Eintrag in einer Rangliste und die Nutzung eines Matchmaking-Systems bei der suche nach Online-Gegenspielern.
+Zu den erweiterten Funktionen gehören zum Beispiel das speichern von Spielen, der Eintrag in einer Rangliste und die Nutzung eines Matchmaking-Systems bei der Suche nach Online-Gegenspielern.
 Zusätzlich gibt es die Möglichkeit an Spielen als Zuschauer teilzunehmen.
 Unter Nutzung einer Cloud-Infrastruktur ist es möglich auf zahlreichen Endgeräten und zu jeder Zeit gegeneinander zu spielen.
 Unter anderem wird dabei neben visuellen Ein-/Ausgabegeräten auch Sprachein-/ausgabe für das Spiel mit dem eigenen, klassischen Spielbrett bereit gestellt.
@@ -84,7 +85,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ### 2.4 Anforderungen im Detail
 
-    - User Stories mit Akzeptanzkritierien 
+    - User Stories mit Akzeptanzkritierien
     - Optional: Name (oder ID) und Priorität ("Muss", "Soll", "Kann")
 
 #### Frontend
@@ -132,7 +133,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 | Spielerzug durchsagen | Spieler | durch eine Sprachausgabe hören, welcher Spieler am Zug ist | ich weiß, welcher Spieler am Zug ist | durch eine Sprachausgabe der momentane Spieler bestimmt wird | Must
 | Momentanen Spieler abfragen | Spieler | durch eine Spracheingabe erfahren, welcher Spieler am Zug ist | ich über eine Sprachausgabe diese Information gewinnen kann | durch eine Spracheingabe abgefragt werden kann, wer am Zug ist und eine Sprachausgabe die Antwort liefert | Must
 | Gegnerzug wiederholen | Spieler | durch eine Spracheingabe den letzten Gegnerzug abfragen | ich die Sprachsteuerung diese Information gewinnen kann | durch eine Spracheingabe der letzte Gegnerzug abgefragt kann und eine Antwort als Sprachausgabe zurückkommt | Must
-| Schach(matt) durchsagen | Spieler | durch eine Sprachausgabe hören, ob nach dem Spielzug der andere Spieler schach(matt) gesetzt worden ist | ich über die Sprachausgabe auf diese Spielentscheidene Situation hingewiesen werde | nach dem Spielzug eine Sprachausgabe informiert, ob ein Spieler schach(matt) gesetzt worden ist | Must
+| Schach(matt) durchsagen | Spieler | durch eine Sprachausgabe hören, ob nach dem Spielzug der andere Spieler schach(matt) gesetzt worden ist | ich über die Sprachausgabe auf diese spielentscheidene Situation hingewiesen werde | nach dem Spielzug eine Sprachausgabe informiert, ob ein Spieler schach(matt) gesetzt worden ist | Must
 | Spielende ansagen | Spieler | durch eine Spracheingabe, das Spiel beenden können | ich über die Sprachsteuerung die Partie verlassen kann | das Spiel beendet ist und eine Sprachausgabe mir dieses bestätigt | Must
 | Speicherabfrage | Spieler | beim beenden des Spiels gefragt werden, ob ich die Partie speichern möchte wenn kein Spieler verloren hat | ich über eine Spracheingabe bestimmen kann, dass die Partie gespeichert werden soll | beim beenden des Spiels gefragt wird wird, ob das Spiel gespeichert werden soll | Must
 | Gewinner durchsagen | Spieler | durch eine Sprachausgabe hören, wer gewonnen hat | ich über den Ausgang den Spiels bescheid weiß | eine Sprachausgabe den Gewinner bestimmt | Must
@@ -203,8 +204,32 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 ## 5 Anhänge
 
 ### 5.1 Glossar
-
     - Definitionen, Abkürzungen, Begriffe
+
+##### AWS
+Amazon Web Services, Cloud-Computing-Anbieter
+
+##### Gast
+Ein nicht registriertes Individuum, das an einer Partie teilhaben möchte.
+
+##### Gegnertyp
+Als Gegnertyp zählt entweder die KI oder ein Spieler.
+
+##### KI / AI
+Künstliche Intelligenz / Artificial Intelligence
+Teilgebiet der Informatik das sich mit der Automatisierung intelligenten Verhaltens und dem Maschinenlernen befasst.
+
+##### Matchmaking
+Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
+
+##### Spieler
+Ein Benutzer mit der Intention ein Spiel zu spielen.
+
+##### User / Benutzer
+Ein, bei Deep-Green registriertes, Individuum ohne die direkte Intention ein Spiel zu spielen.
+
+##### Zuschauer
+Ein Benutzer der das Spielgeschehen nur betrachten möchte.
 
 ### 5.2 Referenzen
 

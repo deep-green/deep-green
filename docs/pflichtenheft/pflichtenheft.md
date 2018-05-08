@@ -77,11 +77,12 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 #### Desktop
 
-![Desktop](/images/Mockups/DesktopMockups.png "Desktop")
-
-#### Mobil
-
-![Mobile](/images/Mockups/MobilMockups.png "Mobile")
+![Hauptmenü und Login](/images/Mockups/Login_MainMenue.png "Hauptmenü und Login")
+![Neues Spiel](/images/Mockups/Neues_Spiel.png "Neues Spiel")
+![Neues Spiel](/images/Mockups/Neues_Spiel_2.png "Neues Spiel")
+![Spiel laden](/images/Mockups/Spiel_Laden.png "Spiel laden")
+![Spielbrett](/images/Mockups/Spielbrett.png "Spielbrett")
+![Zuschauer](/images/Mockups/Zuschauen.png "Zuschauer")
 
 ### 2.4 Anforderungen im Detail
 

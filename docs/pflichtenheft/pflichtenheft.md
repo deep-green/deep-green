@@ -77,11 +77,17 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 #### Desktop
 
-![Desktop](/images/Mockups/DesktopMockups.png "Desktop")
+![Hauptmenü und Login](/images/Mockups/Login_MainMenue.png "Hauptmenü und Login")
 
-#### Mobil
+![Neues Spiel - Teil 1](/images/Mockups/Neues_Spiel.png "Neues Spiel")
 
-![Mobile](/images/Mockups/MobilMockups.png "Mobile")
+![Neues Spiel - Teil 2](/images/Mockups/Neues_Spiel_2.png "Neues Spiel")
+
+![Spiel laden](/images/Mockups/Spiel_Laden.png "Spiel laden")
+
+![Spielbrett](/images/Mockups/Spielbrett.png "Spielbrett")
+
+![Zuschauer](/images/Mockups/Zuschauen.png "Zuschauer")
 
 ### 2.4 Anforderungen im Detail
 
@@ -101,10 +107,10 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 | Spielzug rückgängig | Spieler | Spielzüge gegen die KI rückgängig machen können | ich Fehler beheben und daraus lernen kann | sowohl der Spielzug des Spielers als auch der KI rückgängig gemacht wurde | Can
 | Spielfigur austauschen | Spieler | die Bauer-Spielfigur gegen eine andere tauschen, wenn der Bauer die andere Seite des Spielbrettes erreicht | die Regel eingehalten wird | der Bauer eine neue Spielfigur ist und wie diese behandelt wird | Must
 | Farbe wählen | Spieler | beim Spielen gegen die KI und zu Beginn des Spiels die Farbe der Spielfiguren wählen können | Spielsituationen üben kann | der Spieler die ausgewählte Farbe (Schwarz oder Weiß) spielt | Can
-|Registrieren| User | mich registrieren können | das Matchmaking System nutzen kann | der User angelegt ist und er sich einloggen kann | Must
-|Einloggen| User | mich einloggen können | das System mit meinem Account nutzen kann | der User eingeloggt und im Hauptmenü ist | Must
-| Gastkonto | User | ein Gastkonto haben | ich ohne Registrierung gegen andere Spieler spielen kann | der User ein Gastkonto mit temporärem Namen hat | Must
-| Zuschauen | User | einem Spiel zuschauen können |  ich selbst entscheide, was ich sehen kann | der Zuschauermodus geladen wurde und das Spielgeschehen angezeigt wird | Can
+|Registrieren| Spieler | mich registrieren können | das Matchmaking System nutzen kann | der User angelegt ist und er sich einloggen kann | Must
+|Einloggen| Spieler | mich einloggen können | das System mit meinem Account nutzen kann | der User eingeloggt und im Hauptmenü ist | Must
+| Gastkonto | Spieler | ein Gastkonto haben | ich ohne Registrierung gegen andere Spieler spielen kann | der User ein Gastkonto mit temporärem Namen hat | Must
+| Zuschauen | Zuschauer | einem Spiel zuschauen können |  ich selbst entscheide, was ich sehen kann | der Zuschauermodus geladen wurde und das Spielgeschehen angezeigt wird | Can
 
 #### Bilderkennung
 

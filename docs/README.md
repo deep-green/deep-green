@@ -1,4 +1,5 @@
 # Project Deep Green
+[Pflichtenheft](https://deep-green.github.io/deep-green/)
 
 ### Beschreibung
 Mit Hilfe von Deep Green kann man Brettspiele (z.B. Schach, Dame etc.) konfigurieren und ausführen und als Spieler oder Zuschauer teilnehmen.

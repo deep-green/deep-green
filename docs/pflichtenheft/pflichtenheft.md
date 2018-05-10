@@ -113,6 +113,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 |Einloggen| Spieler | mich einloggen können | das System mit meinem Account nutzen kann | der User eingeloggt und im Hauptmenü ist | Must
 | Gastkonto | Spieler | ein Gastkonto haben | ich ohne Registrierung gegen andere Spieler spielen kann | der User ein Gastkonto mit temporärem Namen hat | Must
 | Zuschauen | Zuschauer | einem Spiel zuschauen können |  ich selbst entscheide, was ich sehen kann | der Zuschauermodus geladen wurde und das Spielgeschehen angezeigt wird | Can
+| Ausloggen | Spieler | mich mit meinem Account ausloggen können | jemand anderes mit seinem Account spielen kann | der Spieler sich ausloggen kann und wider auf der Startseite ist | Can
 
 #### Bilderkennung
 

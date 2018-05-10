@@ -83,7 +83,9 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ![Neues Spiel - Teil 2](/images/Mockups/Neues_Spiel_2.png "Neues Spiel")
 
-![Spiel laden](/images/Mockups/Spiel_Laden.png "Spiel laden")
+![Spiel laden - Teil 1](/images/Mockups/Spiel_Laden.png "Spiel laden")
+
+![Spiel laden - Teil 2](/images/Mockups/Spiel_Laden_2.png "Spiel laden")
 
 ![Spielbrett](/images/Mockups/Spielbrett.png "Spielbrett")
 

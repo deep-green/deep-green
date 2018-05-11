@@ -248,7 +248,7 @@ Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
 Ein Benutzer mit der Intention ein Spiel zu spielen.
 
 #### User / Benutzer
-Ein, bei Deep-Green registriertes, Individuum ohne die direkte Intention ein Spiel zu spielen.
+Ein bei Deep-Green registriertes Individuum ohne die direkte Intention ein Spiel zu spielen.
 
 #### Zuschauer
 Ein Benutzer der das Spielgeschehen nur betrachten möchte.

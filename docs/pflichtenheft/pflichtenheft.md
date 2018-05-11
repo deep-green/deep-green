@@ -202,6 +202,10 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 ### 3.4 Abläufe
 
+#### Zustandsdiagramm
+
+![zustands](/images/Zustand_deep_green.png "Zustandsdiagramm")
+
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
 

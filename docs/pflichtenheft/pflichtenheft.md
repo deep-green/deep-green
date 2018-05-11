@@ -291,7 +291,11 @@ Ein Dienst der Engine, der aus der aktuellen Stellung der Spielfiguren auf dem S
 Ein Benutzer der das Spielgeschehen nur betrachten möchte.
 
 ### 5.2 Referenzen
-
-    - Handbücher, Gesetze
+- [CECP - Chess Engine Protocol](https://www.gnu.org/software/xboard/engine-intf.html)
+- [UCI - Universal Chess Interface](http://www.shredderchess.de/schach-info/features/uci-universal-chess-interface.html)
+- [FEN - Forsyth Edwards Notation](https://de.wikipedia.org/wiki/Forsyth-Edwards-Notation)
+- [Weltschachverband (FIDE)](https://www.fide.com/)
+- [FIDE Schachregeln](http://www.fide.com/fide/handbook.html?id=32&view=category)
+- [FIDE Elo-Zahl Berechnung](https://www.fide.com/fide/handbook.html?id=197&view=article)
 
 ### 5.3 Index

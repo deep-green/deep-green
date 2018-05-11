@@ -221,6 +221,10 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
     - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
+#### 4.1.0 Allgemein
+
+- Framework / Bibliotheken: [socket.io](https://socket.io/)
+
 #### 4.1.1 KI
 Programmiersprache(n): [Python](https://www.python.org/)  
 Framework(s): [Tensorflow](https://www.tensorflow.org/)   

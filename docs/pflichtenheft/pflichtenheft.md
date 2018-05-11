@@ -243,13 +243,13 @@ Methode(n) und Algorithmen:
 #### AWS
 Amazon Web Services, Cloud-Computing-Anbieter
 
-#### CECP - Chess Engine Communication Protocol ####
+#### CECP - Chess Engine Communication Protocol
 Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
 
-#### Elo-Zahl ####
+#### Elo-Zahl
 Eine Bewertungsfunktion
 
-#### Engine ####
+#### Engine
 Menge aller notwendigen Services, um das Spiel lauffähig zu machen und mit dem Frontend zu kommunizieren 
 
 #### Gast
@@ -268,7 +268,7 @@ Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
 #### Spieler
 Ein Benutzer mit der Intention ein Spiel zu spielen.
 
-#### UCI - Universal Chess Interface ####
+#### UCI - Universal Chess Interface
 Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
 
 #### User / Benutzer

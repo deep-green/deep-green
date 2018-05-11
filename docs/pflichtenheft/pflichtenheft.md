@@ -8,6 +8,7 @@
 * Marti Stuwe
 * Alexander Scharow
 * Torsten Niemeier
+* Patrick Reinke
 
 ## 1 Einführung
 
@@ -205,12 +206,12 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
 #### 4.1.1 KI
-Programmiersprache(n): [Python](https://www.python.org/)
-Framework(s): [Tensorflow](https://www.tensorflow.org/)
+Programmiersprache(n): [Python](https://www.python.org/)  
+Framework(s): [Tensorflow](https://www.tensorflow.org/)   
 Methode(n) und Algorithmen:
-    * [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus)
-    * [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen)
-    * [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz)
+* [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus)
+* [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen)
+* [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz)
 
 
 ### 4.2 Verantwortlichkeiten
@@ -227,29 +228,29 @@ Methode(n) und Algorithmen:
 ### 5.1 Glossar
     - Definitionen, Abkürzungen, Begriffe
 
-##### AWS
+#### AWS
 Amazon Web Services, Cloud-Computing-Anbieter
 
-##### Gast
+#### Gast
 Ein nicht registriertes Individuum, das an einer Partie teilhaben möchte.
 
-##### Gegnertyp
+#### Gegnertyp
 Als Gegnertyp zählt entweder die KI oder ein Spieler.
 
-##### KI / AI
+#### KI / AI
 Künstliche Intelligenz / Artificial Intelligence
 Teilgebiet der Informatik das sich mit der Automatisierung intelligenten Verhaltens und dem Maschinenlernen befasst.
 
-##### Matchmaking
+#### Matchmaking
 Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
 
-##### Spieler
+#### Spieler
 Ein Benutzer mit der Intention ein Spiel zu spielen.
 
-##### User / Benutzer
+#### User / Benutzer
 Ein, bei Deep-Green registriertes, Individuum ohne die direkte Intention ein Spiel zu spielen.
 
-##### Zuschauer
+#### Zuschauer
 Ein Benutzer der das Spielgeschehen nur betrachten möchte.
 
 ### 5.2 Referenzen

@@ -243,6 +243,15 @@ Methode(n) und Algorithmen:
 #### AWS
 Amazon Web Services, Cloud-Computing-Anbieter
 
+#### CECP - Chess Engine Communication Protocol ####
+Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
+
+#### Elo-Zahl ####
+Eine Bewertungsfunktion
+
+#### Engine ####
+Menge aller notwendigen Services, um das Spiel lauffähig zu machen und mit dem Frontend zu kommunizieren 
+
 #### Gast
 Ein nicht registriertes Individuum, das an einer Partie teilhaben möchte.
 
@@ -259,8 +268,14 @@ Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
 #### Spieler
 Ein Benutzer mit der Intention ein Spiel zu spielen.
 
+#### UCI - Universal Chess Interface ####
+Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
+
 #### User / Benutzer
 Ein, bei Deep-Green registriertes, Individuum ohne die direkte Intention ein Spiel zu spielen.
+
+#### Zuggenerator
+Ein Dienst der Engine, der aus der aktuellen Stellung der Spielfiguren auf dem Spielbrett alle möglichen, regelkonformen Züge berechnet
 
 #### Zuschauer
 Ein Benutzer der das Spielgeschehen nur betrachten möchte.

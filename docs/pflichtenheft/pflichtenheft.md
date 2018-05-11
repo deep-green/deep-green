@@ -225,6 +225,11 @@ Methode(n) und Algorithmen:
 * [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen)
 * [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz)
 
+#### 4.1.2 Backend / Zuggenerator
+Programmiersprache(n): [Kotlin](https://kotlinlang.org/), [Rust](https://www.rust-lang.org/en-US/)  
+Framework(s): -
+Methode(n) und Algorithmen: -
+
 
 ### 4.2 Verantwortlichkeiten
 

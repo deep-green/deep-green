@@ -204,6 +204,14 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
     - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
+#### 4.1.1 KI
+Programmiersprache(n): [Python](https://www.python.org/)
+Framework(s): [Tensorflow](https://www.tensorflow.org/)
+Methode(n) und Algorithmen:
+    * [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus)
+    * [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen)
+    * [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz)
+
 
 ### 4.2 Verantwortlichkeiten
 

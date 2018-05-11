@@ -50,6 +50,9 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 #### Hauptmenü
 ![usecase_hauptmenu](/images/usecases/deep-green_hauptmenu.png "Hauptmenü")
 
+#### Stellungseditor (Abzweig aus Spiel starten)
+![usecase_stellung](/images/usecases/deep-green_stellungseditor.png "Stellungseditor")
+
 #### Im Spiel (ohne Sprachsteuerung)
 ![usecase_ingame](/images/usecases/deep-green_ingame.png "Im Spiel")
 

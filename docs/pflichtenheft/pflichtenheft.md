@@ -259,6 +259,9 @@ Eine Bewertungsfunktion
 #### Engine
 Menge aller notwendigen Services, um das Spiel lauffähig zu machen und mit dem Frontend zu kommunizieren 
 
+#### FIDE - Fédération Internationale des Échecs (französisch: Internationaler Schachverband)
+Weltschachbund, nach dessen regularien weltweit Turniere abgehalten werden und die Weltrangliste geführt wird
+
 #### Gast
 Ein nicht registriertes Individuum, das an einer Partie teilhaben möchte.
 

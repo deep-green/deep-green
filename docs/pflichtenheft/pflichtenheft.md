@@ -233,8 +233,10 @@ Methode(n) und Algorithmen: -
 
 ### 4.2 Verantwortlichkeiten
 
-    - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
-    - Rollendefinition und Zuordnung
+#### 4.2.1 Rollendefinitionen
+
+#### 4.2.2 Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2 und Rollen
+
 
 ### 4.3 Grober Projektplan
 

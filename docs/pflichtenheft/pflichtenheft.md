@@ -158,7 +158,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
 |Zug prüfen|Spieler|meine Züge auf Korrektheit geprüft werden|die Spielregeln des Spiels eingehalten werden|die Züge korrekt auf Gültigkeit geprüft werden| Must
 |Spielende prüfen|Spieler|die Spielsituation bewertet|das Ende des Spiels (Gewinn/Verlust) erkannt wird|das Spielende korrekt erkannt wird| Must
-|Frontend-Kommunikation 1|Frontend|Nachrichten an das Backend senden und von diesem empfangen|das Backend die Eingaben der Spieler erkennt und weitergibt|eine stabile Schnittstelle implementiert ist| Must
+|Frontend-Kommunikation|Frontend|Nachrichten an das Backend senden und von diesem empfangen|das Backend die Eingaben der Spieler erkennt und weitergibt|eine stabile Schnittstelle implementiert ist| Must
 
 #### Künstliche Intelligenz
 
@@ -174,11 +174,23 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ### 3.1 Systemübersicht
 
-    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
-    - Schnittstellenbeschreibung
-    - Kommunikationsprotokolle, Datenformate
+#### 3.1.1 Systemarchitekturdiagramm
 
 ![Systemarchitektur](/images/sysArch.png "Systemarchitektur")
+
+#### 3.1.2 Schnittstellenbeschreibung
+
+#### 3.1.3 Kommunikationsprotokolle, Datenformate
+
+__Kommunikationsprotokolle:__
+Es gibt zwei gängige Protokolle zur Übermittlung von Daten zwischen Frontend und Backend.
+- _CECP - Chess Engine Communication Protocol_
+- _UCI - Universal Chess Interface_
+
+__Datenformate:__
+Als relevante Datenformate werden die gängigen Standards für Schachsoftware verwendet.
+- _FEN - Forsyth-Edwards Notation_ zur Darstellung der Spielsituation auf einem Spielbrett
+- _Elo Zahlen_ zur Klassifizierung der Spieler nach ihrer Stärke
 
 ### 3.2 Softwarearchitektur
 
@@ -213,11 +225,18 @@ Methode(n) und Algorithmen:
 * [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen)
 * [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz)
 
+#### 4.1.2 Backend / Zuggenerator
+Programmiersprache(n): [Kotlin](https://kotlinlang.org/), [Rust](https://www.rust-lang.org/en-US/)  
+Framework(s): -
+Methode(n) und Algorithmen: -
+
 
 ### 4.2 Verantwortlichkeiten
 
-    - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
-    - Rollendefinition und Zuordnung
+#### 4.2.1 Rollendefinitionen
+
+#### 4.2.2 Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2 und Rollen
+
 
 ### 4.3 Grober Projektplan
 
@@ -230,6 +249,18 @@ Methode(n) und Algorithmen:
 
 #### AWS
 Amazon Web Services, Cloud-Computing-Anbieter
+
+#### CECP - Chess Engine Communication Protocol
+Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
+
+#### Elo-Zahl
+Eine Bewertungsfunktion
+
+#### Engine
+Menge aller notwendigen Services, um das Spiel lauffähig zu machen und mit dem Frontend zu kommunizieren 
+
+#### FIDE - Fédération Internationale des Échecs (französisch: Internationaler Schachverband)
+Weltschachbund, nach dessen regularien weltweit Turniere abgehalten werden und die Weltrangliste geführt wird
 
 #### Gast
 Ein nicht registriertes Individuum, das an einer Partie teilhaben möchte.
@@ -247,14 +278,24 @@ Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
 #### Spieler
 Ein Benutzer mit der Intention ein Spiel zu spielen.
 
+#### UCI - Universal Chess Interface
+Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
+
 #### User / Benutzer
 Ein bei Deep-Green registriertes Individuum ohne die direkte Intention ein Spiel zu spielen.
+
+#### Zuggenerator
+Ein Dienst der Engine, der aus der aktuellen Stellung der Spielfiguren auf dem Spielbrett alle möglichen, regelkonformen Züge berechnet
 
 #### Zuschauer
 Ein Benutzer der das Spielgeschehen nur betrachten möchte.
 
 ### 5.2 Referenzen
-
-    - Handbücher, Gesetze
+- [CECP - Chess Engine Protocol](https://www.gnu.org/software/xboard/engine-intf.html)
+- [UCI - Universal Chess Interface](http://www.shredderchess.de/schach-info/features/uci-universal-chess-interface.html)
+- [FEN - Forsyth Edwards Notation](https://de.wikipedia.org/wiki/Forsyth-Edwards-Notation)
+- [Weltschachverband (FIDE)](https://www.fide.com/)
+- [FIDE Schachregeln](http://www.fide.com/fide/handbook.html?id=32&view=category)
+- [FIDE Elo-Zahl Berechnung](https://www.fide.com/fide/handbook.html?id=197&view=article)
 
 ### 5.3 Index

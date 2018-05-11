@@ -174,11 +174,23 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ### 3.1 Systemübersicht
 
-    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
-    - Schnittstellenbeschreibung
-    - Kommunikationsprotokolle, Datenformate
+#### 3.1.1 Systemarchitekturdiagramm
 
 ![Systemarchitektur](/images/sysArch.png "Systemarchitektur")
+
+#### 3.1.2 Schnittstellenbeschreibung
+
+#### 3.1.3 Kommunikationsprotokolle, Datenformate
+
+__Kommunikationsprotokolle:__
+Es gibt zwei gängige Protokolle zur Übermittlung von Daten zwischen Frontend und Backend.
+- _CECP - Chess Engine Communication Protocol_
+- _UCI - Universal Chess Interface_
+
+__Datenformate:__
+Als relevante Datenformate werden die gängigen Standards für Schachsoftware verwendet.
+- _FEN - Forsyth-Edwards Notation_ zur Darstellung der Spielsituation auf einem Spielbrett
+- _Elo Zahlen_ zur Klassifizierung der Spieler nach ihrer Stärke
 
 ### 3.2 Softwarearchitektur
 

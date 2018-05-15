@@ -194,7 +194,9 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 ### 3.2 Softwarearchitektur
 
-    - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
+#### 3.2.1 Softwarearchitekturdiagramm
+
+![Softwarearchitektur](/images/swarch.png "Softwarearchitektur")
 
 ### 3.3 Datenmodell
 
@@ -265,7 +267,7 @@ Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -
 Eine Bewertungsfunktion
 
 #### Engine
-Menge aller notwendigen Services, um das Spiel lauffähig zu machen und mit dem Frontend zu kommunizieren 
+Menge aller notwendigen Services, um das Spiel lauffähig zu machen und mit dem Frontend zu kommunizieren
 
 #### FIDE - Fédération Internationale des Échecs (französisch: Internationaler Schachverband)
 Weltschachbund, nach dessen regularien weltweit Turniere abgehalten werden und die Weltrangliste geführt wird

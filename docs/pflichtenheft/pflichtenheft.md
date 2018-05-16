@@ -243,6 +243,7 @@ Framework(s):
 * [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
 * [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module
 * [mongoose](http://mongoosejs.com/) - Anbindung von mongoDB-Datenbanken an Node.js-Anwendungen
+* [rayon](https://crates.io/crates/rayon) - Eine Parallelisierungs-Bibliothek für Rust-Projekte
 
 Methode(n) und Algorithmen: -
 

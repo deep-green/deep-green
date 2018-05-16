@@ -228,8 +228,8 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 - Framework / Bibliotheken: [socket.io](https://socket.io/)
 
 #### 4.1.1 KI
-Programmiersprache(n): [Python](https://www.python.org/), [C++](https://de.wikipedia.org/wiki/C%2B%2B)
-Framework(s): [Tensorflow](https://www.tensorflow.org/)   
+Programmiersprache(n): [Python](https://www.python.org/), [C++](https://de.wikipedia.org/wiki/C%2B%2B)  
+Framework(s): [Tensorflow](https://www.tensorflow.org/)  
 Methode(n) und Algorithmen:
 * [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus)
 * [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen)

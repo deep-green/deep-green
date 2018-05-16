@@ -235,8 +235,14 @@ Methode(n) und Algorithmen:
 * [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz)
 
 #### 4.1.2 Backend / Zuggenerator
-Programmiersprache(n): [Javascript](http://ecma-international.org/), [Rust](https://www.rust-lang.org/en-US/)
-Framework(s): [Node.js®](https://nodejs.org/), [neon-bindings](https://www.neon-bindings.com/)
+Programmiersprache(n):
+* [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache 
+* [Rust](https://www.rust-lang.org/en-US/) - eine moderne Systemprogrammiersprache
+
+Framework(s):
+* [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
+* [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module
+
 Methode(n) und Algorithmen: -
 
 #### 4.1.3 Datenbank

@@ -235,14 +235,14 @@ Methode(n) und Algorithmen:
 * [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz)
 
 #### 4.1.2 Backend / Zuggenerator
-Programmiersprache(n): [Kotlin](https://kotlinlang.org/), [Rust](https://www.rust-lang.org/en-US/)  
-Framework(s): -
+Programmiersprache(n): [Javascript](http://ecma-international.org/), [Rust](https://www.rust-lang.org/en-US/)
+Framework(s): [Node.js®](https://nodejs.org/), [neon-bindings](https://www.neon-bindings.com/)
 Methode(n) und Algorithmen: -
 
 #### 4.1.3 Datenbank
-Framework(s) / Bibliothek(en):   
-* [mongoDB](https://www.mongodb.com/) 
-* [mongoose](http://mongoosejs.com/)   
+Framework(s) / Bibliothek(en):
+* [mongoDB](https://www.mongodb.com/)
+* [mongoose](http://mongoosejs.com/)
 
 
 ### 4.2 Verantwortlichkeiten

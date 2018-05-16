@@ -242,14 +242,13 @@ Programmiersprache(n):
 Framework(s):
 * [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
 * [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module
+* [mongoose](http://mongoosejs.com/) - Anbindung von mongoDB-Datenbanken an Node.js-Anwendungen
 
 Methode(n) und Algorithmen: -
 
 #### 4.1.3 Datenbank
 Framework(s) / Bibliothek(en):
-* [mongoDB](https://www.mongodb.com/)
-* [mongoose](http://mongoosejs.com/)
-
+* [mongoDB](https://www.mongodb.com/) - ein objektorientiertes Datenbank-System
 
 ### 4.2 Verantwortlichkeiten
 

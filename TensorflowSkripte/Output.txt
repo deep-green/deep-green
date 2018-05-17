@@ -1,0 +1,7 @@
+Bauer:4
+Turm: 4*8 = 32
+Springer: 4*2 = 8
+Läufer: 4*8 = 32
+Dame: 4*8 + 4*8 = 64
+König: 8
+Sum: 148

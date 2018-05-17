@@ -44,21 +44,21 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 * Benutzer kann sich registrieren
 * Als Gast spielbar
 
-### Use Cases
+### 2.2 Use Cases
 
-#### Startseite
+#### 2.2.1 Startseite
 ![usecase_start](/images/usecases/deep-green_start.png "Startseite")
 
-#### Hauptmenü
+#### 2.2.2 Hauptmenü
 ![usecase_hauptmenu](/images/usecases/deep-green_hauptmenu.png "Hauptmenü")
 
-#### Stellungseditor (Abzweig aus 'Neues Spiel starten')
+#### 2.2.3 Stellungseditor (Abzweig aus 'Neues Spiel starten')
 ![usecase_stellung](/images/usecases/deep-green_stellungseditor.png "Stellungseditor")
 
-#### Im Spiel (ohne Sprachsteuerung)
+#### 2.2.4 Im Spiel (ohne Sprachsteuerung)
 ![usecase_ingame](/images/usecases/deep-green_ingame.png "Im Spiel")
 
-#### Im Spiel (Sprachsteuerung)
+#### 2.2.5 Im Spiel (Sprachsteuerung)
 ![usecase_voice](/images/usecases/deep-green_ingameVoice.png "Sprachsteuerung")
 
 ### 2.2 Nicht-funktionale Anforderungen
@@ -80,7 +80,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ### 2.3 Graphische Benutzerschnittstelle
 
-#### Desktop
+#### 2.3.1 Desktop
 
 ![Hauptmenü und Login](/images/Mockups/Login_MainMenue.png "Hauptmenü und Login")
 
@@ -101,7 +101,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
     - User Stories mit Akzeptanzkritierien
     - Optional: Name (oder ID) und Priorität ("Muss", "Soll", "Kann")
 
-#### Frontend
+#### 2.4.1 Frontend
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
@@ -120,7 +120,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 | Zuschauen | Zuschauer | einem Spiel zuschauen können |  ich selbst entscheide, was ich sehen kann | der Zuschauermodus geladen wurde und das Spielgeschehen angezeigt wird | Can
 | Ausloggen | Spieler | mich mit meinem Account ausloggen können | jemand anderes mit seinem Account spielen kann | der Spieler sich ausloggen kann und wider auf der Startseite ist | Can
 
-#### Bilderkennung
+#### 2.4.2 Bilderkennung
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
@@ -131,7 +131,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ![schachnotation](/images/schachnotation.jpg "Schachnotation")
 
-#### Sprachsteuerung
+#### 2.4.3 Sprachsteuerung
 | **Name**| **Als**... |   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
 | Im Hauptmenü |
@@ -152,7 +152,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 | Speicherabfrage | Spieler | beim beenden des Spiels gefragt werden, ob ich die Partie speichern möchte wenn kein Spieler verloren hat | ich über eine Spracheingabe bestimmen kann, dass die Partie gespeichert werden soll | beim beenden des Spiels gefragt wird wird, ob das Spiel gespeichert werden soll | Must
 | Gewinner durchsagen | Spieler | durch eine Sprachausgabe hören, wer gewonnen hat | ich über den Ausgang den Spiels bescheid weiß | eine Sprachausgabe den Gewinner bestimmt | Must
 
-#### Backend
+#### 2.4.4 Backend
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
@@ -160,7 +160,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 |Spielende prüfen|Spieler|die Spielsituation bewertet|das Ende des Spiels (Gewinn/Verlust) erkannt wird|das Spielende korrekt erkannt wird| Must
 |Frontend-Kommunikation|Frontend|Nachrichten an das Backend senden und von diesem empfangen|das Backend die Eingaben der Spieler erkennt und weitergibt|eine stabile Schnittstelle implementiert ist| Must
 
-#### Künstliche Intelligenz
+#### 2.4.5 Künstliche Intelligenz
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
@@ -204,7 +204,7 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 ### 3.4 Abläufe
 
-#### Zustandsdiagramm
+#### 3.4.1 Zustandsdiagramm
 
 ![zustands](/images/Zustand_deep_green.png "Zustandsdiagramm")
 
@@ -223,11 +223,11 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
     - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
-#### 4.1.0 Allgemein  
+#### 4.1.1 Allgemein  
 Framework(s) / Bibliothek(en): 
 * [socket.io](https://socket.io/) - Real-time bidirektionale und eventbasierte Kommunikation
 
-#### 4.1.1 KI
+#### 4.1.2 KI
 Programmiersprache(n): 
 * [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
 * [C++](https://de.wikipedia.org/wiki/C%2B%2B) - eine effiziente Systemprogrammiersprache 
@@ -240,7 +240,7 @@ Methode(n) und Algorithmen:
 * [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen) - eine Methode des maschinellen Lernens zu trainierung das Handeln für eine maximale Belohnung 
 * [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz) - ein Algorithmus der ein Netz aus künstlichen Neuronen bildet zum erlernen von Handlungen
 
-#### 4.1.2 Backend / Zuggenerator
+#### 4.1.3 Backend / Zuggenerator
 Programmiersprache(n):
 * [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache 
 * [Rust](https://www.rust-lang.org/en-US/) - eine moderne Systemprogrammiersprache
@@ -253,7 +253,7 @@ Framework(s):
 
 Methode(n) und Algorithmen: -
 
-#### 4.1.3 Datenbank
+#### 4.1.4 Datenbank
 Framework(s) / Bibliothek(en):
 * [mongoDB](https://www.mongodb.com/) - ein dokumentenorientiertes Datenbank-System
 

@@ -273,47 +273,50 @@ Framework(s) / Bibliothek(en):
 ### 5.1 Glossar
     - Definitionen, Abkürzungen, Begriffe
 
-#### AWS
+__AWS__  
 Amazon Web Services, Cloud-Computing-Anbieter
 
-#### CECP - Chess Engine Communication Protocol
+__CECP - Chess Engine Communication Protocol__  
 Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
 
-#### Elo-Zahl
+__Elo-Zahl__  
 Eine Bewertungsfunktion
 
-#### Engine
+__Engine__  
 Menge aller notwendigen Services, um das Spiel lauffähig zu machen und mit dem Frontend zu kommunizieren
 
-#### FIDE - Fédération Internationale des Échecs (französisch: Internationaler Schachverband)
+__FIDE - Fédération Internationale des Échecs (französisch: Internationaler Schachverband)__  
 Weltschachbund, nach dessen regularien weltweit Turniere abgehalten werden und die Weltrangliste geführt wird
 
-#### Gast
+__Gast__  
 Ein nicht registriertes Individuum, das an einer Partie teilhaben möchte.
 
-#### Gegnertyp
+__Gegnertyp__  
 Als Gegnertyp zählt entweder die KI oder ein Spieler.
 
-#### KI / AI
+__KI / AI__  
 Künstliche Intelligenz / Artificial Intelligence
 Teilgebiet der Informatik das sich mit der Automatisierung intelligenten Verhaltens und dem Maschinenlernen befasst.
 
-#### Matchmaking
+__ML - Maschinelles Lernen / Machine Learning__  
+Ein Konzept zum lernen aus Erfahrungen und Beispielen. Ein Teilgebiet der künstlichen Intelligenz.
+
+__Matchmaking__  
 Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
 
-#### Spieler
+__Spieler__  
 Ein Benutzer mit der Intention ein Spiel zu spielen.
 
-#### UCI - Universal Chess Interface
+__UCI - Universal Chess Interface__  
 Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
 
-#### User / Benutzer
+__User / Benutzer__  
 Ein bei Deep-Green registriertes Individuum ohne die direkte Intention ein Spiel zu spielen.
 
-#### Zuggenerator
+__Zuggenerator__    
 Ein Dienst der Engine, der aus der aktuellen Stellung der Spielfiguren auf dem Spielbrett alle möglichen, regelkonformen Züge berechnet
 
-#### Zuschauer
+__Zuschauer__  
 Ein Benutzer der das Spielgeschehen nur betrachten möchte.
 
 ### 5.2 Referenzen

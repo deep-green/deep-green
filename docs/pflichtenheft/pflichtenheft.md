@@ -224,15 +224,21 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
 #### 4.1.0 Allgemein  
-Framework / Bibliotheken: [socket.io](https://socket.io/)
+Framework(s) / Bibliothek(en): 
+* [socket.io](https://socket.io/) - Real-time bidirektionale und eventbasierte Kommunikation
 
 #### 4.1.1 KI
-Programmiersprache(n): [Python](https://www.python.org/), [C++](https://de.wikipedia.org/wiki/C%2B%2B)  
-Framework(s): [Tensorflow](https://www.tensorflow.org/)  
+Programmiersprache(n): 
+* [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
+* [C++](https://de.wikipedia.org/wiki/C%2B%2B) - eine effiziente Systemprogrammiersprache 
+ 
+Framework(s): 
+* [Tensorflow](https://www.tensorflow.org/) - ein Open-Source Framework für das maschinelle Lernen
+
 Methode(n) und Algorithmen:
-* [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus)
-* [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen)
-* [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz)
+* [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus) - ein Algorithmus zu Filterung von optimalen Spielzügen mit Tiefensuche
+* [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen) - eine Methode des maschinellen Lernens zu trainierung das Handeln für eine maximale Belohnung 
+* [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz) - ein Algorithmus der ein Netz aus künstlichen Neuronen bildet zum erlernen von Handlungen
 
 #### 4.1.2 Backend / Zuggenerator
 Programmiersprache(n):
@@ -249,7 +255,7 @@ Methode(n) und Algorithmen: -
 
 #### 4.1.3 Datenbank
 Framework(s) / Bibliothek(en):
-* [mongoDB](https://www.mongodb.com/) - ein objektorientiertes Datenbank-System
+* [mongoDB](https://www.mongodb.com/) - ein dokumentenorientiertes Datenbank-System
 
 ### 4.2 Verantwortlichkeiten
 

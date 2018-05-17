@@ -198,6 +198,10 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 ![Softwarearchitektur](/images/swarch.png "Softwarearchitektur")
 
+#### 3.2.2 Google Assistant Strukturdiagramm
+
+![googleAssistantStrukturdiagramm](/images/googleAssistantStrukturdiagramm.png "Google Assistant Strukturdiagramm")
+
 ### 3.3 Datenmodell
 
     - Konzeptionelles Analyseklassendiagramm

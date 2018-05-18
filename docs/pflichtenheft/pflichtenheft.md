@@ -234,7 +234,6 @@ Framework(s) / Bibliothek(en):
 #### 4.1.2 KI
 Programmiersprache(n): 
 * [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
-* [C++](https://de.wikipedia.org/wiki/C%2B%2B) - eine effiziente Systemprogrammiersprache 
  
 Framework(s): 
 * [Tensorflow](https://www.tensorflow.org/) - ein Open-Source Framework für das maschinelle Lernen

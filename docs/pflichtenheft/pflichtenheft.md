@@ -179,6 +179,18 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 ![Systemarchitektur](/images/sysArch.png "Systemarchitektur")
 
 #### 3.1.2 Schnittstellenbeschreibung
+##### 3.1.2.1 Backend ←→ KI
+Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-green/ki2)).  
+
+__Emit__
+| Channel | Namespace | Data |
+|:--------|:----------|:-----|
+| getMove | /         | FEN  |
+
+__Listen__
+| Channel | Namespace | Data |
+|:--------|:----------|:-----|
+| getMove | /         | Move |
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 

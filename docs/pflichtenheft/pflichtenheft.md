@@ -4,11 +4,14 @@
 
 ### Beteiligte Autoren
 
-* Tobias Koppmann
-* Marti Stuwe
-* Alexander Scharow
-* Torsten Niemeier
-* Patrick Reinke
+* [Luis Deutsch](https://github.com/Luisnator)
+* [Tobias Koppmann](https://github.com/T08145)
+* [Nicola Kühnert](https://github.com/NicolaKuehnert)
+* [Torsten Niemeier](https://github.com/ToWiNi)
+* [Phillip Penner](https://github.com/Phillip51)
+* [Patrick Reinke](https://github.com/reinkepatrick)
+* [Alexander Scharow](https://github.com/TwentyOneLunex)
+* [Marti Stuwe](https://github.com/martistuwe)
 
 ## 1 Einführung
 

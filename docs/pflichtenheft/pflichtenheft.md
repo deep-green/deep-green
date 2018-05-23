@@ -251,9 +251,13 @@ Framework(s) / Bibliothek(en):
 #### 4.1.2 KI
 Programmiersprache(n): 
 * [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
+* [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache 
+* [Rust](https://www.rust-lang.org/en-US/) - eine moderne Systemprogrammiersprache  
  
 Framework(s): 
 * [Tensorflow](https://www.tensorflow.org/) - ein Open-Source Framework für das maschinelle Lernen
+* [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
+* [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module 
 
 Methode(n) und Algorithmen:
 * [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus) - ein Algorithmus zu Filterung von optimalen Spielzügen mit Tiefensuche

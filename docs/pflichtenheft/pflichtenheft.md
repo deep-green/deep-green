@@ -221,7 +221,7 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 ### 3.3 Datenmodell
 
-    - Konzeptionelles Analyseklassendiagramm
+¡[Analyse-Klassendiagramm](/images/analyseklassendiagramm.png "Analyse-Klassendiagramm")
 
 ### 3.4 Abläufe
 

@@ -184,28 +184,64 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 #### 3.1.2 Schnittstellenbeschreibung
 Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-green/ki2)).  
 
-__Client__
+##### 3.1.2.1 Client
 
 | Methode    | Parameter                  | Beschreibung                                                                                                |
 |:-----------|:---------------------------|:------------------------------------------------------------------------------------------------------------|
-| invitation | FEN, ID_Enemy              | Zum einladen von einem gegnerischen Spieler                                                                 |
+| invitation | FEN, ID_enemy              | Zum einladen von einem gegnerischen Spieler                                                                 |
 | reject     |                            | Zum ablehnen eines Zuges oder eines Bildes                                                                  |
-| receive    | FEN, ID_Game, Color, Turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes                                                 |
-| end        | Reason, ID_Game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+| receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes                                                 |
+| end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
-__Server__
+__invitation__
+```json
+{
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "ID_enemy": "maxmustermann"
+}
+```
+
+__reject__
+```json
+{
+}
+```
+
+__receive__
+```json
+{
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "ID_game": 2,
+  "color": true,
+  "turns": [
+    "e2e4",
+    "c2c4"
+  ]
+}
+```
+
+__end__
+```json
+{
+  "reason": "connection lost",
+  "ID_game": 2,
+  "ID_player": "heinrichmustermann"
+}
+```
+
+###### 3.1.2.2 Backend
 
 | Methode    | Parameter                             | Beschreibung                                                                                              |
 |:-----------|:--------------------------------------|:----------------------------------------------------------------------------------------------------------|
-| makeMove   | FEN &#124; Move, ID_Game, JWT-Token   | Zum tätigen eines Zuges                                                                                   |
-| rewind     | ID_Game, [TurnCount], JWT-Token       | Zum rückgängig machen eines Zuges, optinale Angabe der Anzahl der Züge                                    |
+| makeMove   | FEN &#124; Move, ID_game, JWT-Token   | Zum tätigen eines Zuges                                                                                   |
+| rewind     | ID_game, JWT-Token, [turnCount]       | Zum rückgängig machen eines Zuges, optinale Angabe der Anzahl der Züge                                    |
 | reject     | JWT-Token                             | Zum ablehnen von Einladungen                                                                              |
-| image      | Image, Color, JWT-Token               | Zum hochladen einer Spielsituation per Bild                                                               |
-| saveGame   | ID_Game, JWT-Token                    | Zum speichern von Spielen                                                                                 |
-| newGame    | [FEN], ID_Enemy, Color, JWT-Token     | Zum starten eines neuen Spiels                                                                            |
-| accept     | ID_Game, JWT-Token                    | Zum annehmen eines Spiels                                                                                 |
-| saveTurn   | ID_Game, Turn, JWT-Token              | Zum markieren eines Zuges                                                                                 |
-| end        | Reason, ID_Game, JWT-Token            | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+| image      | Image, color, JWT-Token               | Zum hochladen einer Spielsituation per Bild                                                               |
+| saveGame   | ID_game, JWT-Token                    | Zum speichern von Spielen                                                                                 |
+| newGame    | ID_enemy, color, JWT-Token, [FEN]     | Zum starten eines neuen Spiels                                                                            |
+| accept     | ID_game, JWT-Token                    | Zum annehmen eines Spiels                                                                                 |
+| saveTurn   | ID_game, turn, JWT-Token              | Zum markieren eines Zuges                                                                                 |
+| end        | reason, ID_game, JWT-Token            | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 

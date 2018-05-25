@@ -193,10 +193,10 @@ __Emit__
 
 __Listen__
 
-| Channel | Namespace | Data |
-|:--------|:----------|:-----|
-| getMove | /         | Move |
-| rejectMove| /       | rejection|
+| Channel   | Namespace | Data     |
+|:----------|:----------|:---------|
+| getMove   | /         | Move     |
+| rejectMove| /         | rejection|
 
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate

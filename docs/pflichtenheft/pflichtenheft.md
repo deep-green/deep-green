@@ -285,6 +285,15 @@ Methode(n) und Algorithmen: -
 Framework(s) / Bibliothek(en):
 * [mongoDB](https://www.mongodb.com/) - ein dokumentenorientiertes Datenbank-System
 
+#### 4.1.5 CV/Bilderkennung
+Programmiersprache(n): 
+* [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
+* [C++](https://de.wikipedia.org/wiki/C%2B%2B/) - eine genormte Programmiersprache 
+ 
+Framework(s)/Bibliotheken: 
+* [OpenCV](https://opencv.org/) - Algorithmenbibliothek für Computer Vision
+
+
 ### 4.2 Verantwortlichkeiten
 
 #### 4.2.1 Rollendefinitionen

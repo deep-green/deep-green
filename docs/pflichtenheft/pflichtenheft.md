@@ -196,6 +196,8 @@ __Listen__
 | Channel | Namespace | Data |
 |:--------|:----------|:-----|
 | getMove | /         | Move |
+| rejectMove| /       | rejection|
+
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 

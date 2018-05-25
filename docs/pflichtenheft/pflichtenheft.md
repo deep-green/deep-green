@@ -195,17 +195,17 @@ __Client__
 
 __Server__
 
-| Methode    | Parameter                         | Beschreibung                                                                                              |
-|:-----------|:----------------------------------|:----------------------------------------------------------------------------------------------------------|
-| makeMove   | FEN \| Move, ID_Game, JWT-Token   | Zum tätigen eines Zuges                                                                                   |
-| rewind     | ID_Game, [TurnCount], JWT-Token   | Zum rückgängig machen eines Zuges, optinale Angabe der Anzahl der Züge                                    |
-| reject     | JWT-Token                         | Zum ablehnen von Einladungen                                                                              |
-| image      | Image, Color, JWT-Token           | Zum hochladen einer Spielsituation per Bild                                                               |
-| saveGame   | ID_Game, JWT-Token                | Zum speichern von Spielen                                                                                 |
-| newGame    | [FEN], ID_Enemy, Color, JWT-Token | Zum starten eines neuen Spiels                                                                            |
-| accept     | ID_Game, JWT-Token                | Zum annehmen eines Spiels                                                                                 |
-| saveTurn   | ID_Game, Turn, JWT-Token          | Zum markieren eines Zuges                                                                                 |
-| end        | Reason, ID_Game, JWT-Token        | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+| Methode    | Parameter                             | Beschreibung                                                                                              |
+|:-----------|:--------------------------------------|:----------------------------------------------------------------------------------------------------------|
+| makeMove   | FEN &#124; Move, ID_Game, JWT-Token   | Zum tätigen eines Zuges                                                                                   |
+| rewind     | ID_Game, [TurnCount], JWT-Token       | Zum rückgängig machen eines Zuges, optinale Angabe der Anzahl der Züge                                    |
+| reject     | JWT-Token                             | Zum ablehnen von Einladungen                                                                              |
+| image      | Image, Color, JWT-Token               | Zum hochladen einer Spielsituation per Bild                                                               |
+| saveGame   | ID_Game, JWT-Token                    | Zum speichern von Spielen                                                                                 |
+| newGame    | [FEN], ID_Enemy, Color, JWT-Token     | Zum starten eines neuen Spiels                                                                            |
+| accept     | ID_Game, JWT-Token                    | Zum annehmen eines Spiels                                                                                 |
+| saveTurn   | ID_Game, Turn, JWT-Token              | Zum markieren eines Zuges                                                                                 |
+| end        | Reason, ID_Game, JWT-Token            | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 

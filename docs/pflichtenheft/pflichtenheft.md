@@ -186,13 +186,26 @@ Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-g
 
 __Client__
 
-| Methode    | Parameter               | Beschreibung                                                                                              |
-|:-----------|:------------------------|:----------------------------------------------------------------------------------------------------------|
-| invitation | FEN, ID_E               | Zum Einladen von einem gegnerischen Spieler                                                               |
-| reject     |                         | Zum Ablehnen von Zügen, Bildern und Einladungen                                                           |
-| receive    | FEN, ID_G, Color, Turns | Zum teilen und/oder bestätigen von Zügen und Bildern                                                      |
-| end        | Reason, ID_G, ID_S      | Zum beenden von Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+| Methode    | Parameter                  | Beschreibung                                                                                                |
+|:-----------|:---------------------------|:------------------------------------------------------------------------------------------------------------|
+| invitation | FEN, ID_Enemy              | Zum einladen von einem gegnerischen Spieler                                                                 |
+| reject     |                            | Zum ablehnen eines Zuges oder eines Bildes                                                                  |
+| receive    | FEN, ID_Game, Color, Turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes                                                 |
+| end        | Reason, ID_Game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
+__Server__
+
+| Methode    | Parameter                         | Beschreibung                                                                                              |
+|:-----------|:----------------------------------|:----------------------------------------------------------------------------------------------------------|
+| makeMove   | FEN \| Move, ID_Game, JWT-Token   | Zum tätigen eines Zuges                                                                                   |
+| rewind     | ID_Game, [TurnCount], JWT-Token   | Zum rückgängig machen eines Zuges, optinale Angabe der Anzahl der Züge                                    |
+| reject     | JWT-Token                         | Zum ablehnen von Einladungen                                                                              |
+| image      | Image, Color, JWT-Token           | Zum hochladen einer Spielsituation per Bild                                                               |
+| saveGame   | ID_Game, JWT-Token                | Zum speichern von Spielen                                                                                 |
+| newGame    | [FEN], ID_Enemy, Color, JWT-Token | Zum starten eines neuen Spiels                                                                            |
+| accept     | ID_Game, JWT-Token                | Zum annehmen eines Spiels                                                                                 |
+| saveTurn   | ID_Game, Turn, JWT-Token          | Zum markieren eines Zuges                                                                                 |
+| end        | Reason, ID_Game, JWT-Token        | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 

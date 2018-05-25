@@ -193,9 +193,11 @@ __Emit__
 
 __Listen__
 
-| Channel | Namespace | Data |
-|:--------|:----------|:-----|
-| getMove | /         | Move |
+| Channel   | Namespace | Data     |
+|:----------|:----------|:---------|
+| getMove   | /         | Move     |
+| rejectMove| /         | rejection|
+
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 
@@ -262,6 +264,7 @@ Framework(s):
 * [Tensorflow](https://www.tensorflow.org/) - ein Open-Source Framework für das maschinelle Lernen
 * [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
 * [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module 
+* [Jest](https://facebook.github.io/jest/) - Ein Unit-Test-Framework für Javascript
 
 Methode(n) und Algorithmen:
 * [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus) - ein Algorithmus zu Filterung von optimalen Spielzügen mit Tiefensuche

@@ -236,6 +236,10 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
 
+#### 3.5.1 CV Zustandsdiagramm zur Bilderkennung
+
+![CV_Zustandsdiagramm](/images/cv_zustandsdiagramm.png "CV Zustandsdiagramm")
+
 ## 4 Projektorganisation
 
 ### 4.1 Annahmen

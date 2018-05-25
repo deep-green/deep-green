@@ -244,6 +244,7 @@ Framework(s):
 * [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module
 * [mongoose](http://mongoosejs.com/) - Anbindung von mongoDB-Datenbanken an Node.js-Anwendungen
 * [rayon](https://crates.io/crates/rayon) - Eine Parallelisierungs-Bibliothek für Rust-Projekte
+* [Jest](https://facebook.github.io/jest/) - Ein Unit-Test-Framework für Javascript
 
 Methode(n) und Algorithmen: -
 

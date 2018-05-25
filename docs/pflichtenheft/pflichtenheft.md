@@ -182,21 +182,16 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 ![Systemarchitektur](/images/sysArch.png "Systemarchitektur")
 
 #### 3.1.2 Schnittstellenbeschreibung
-##### 3.1.2.1 Backend ←→ KI
 Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-green/ki2)).  
 
-__Emit__
+__Client__
 
-| Channel | Namespace | Data |
-|:--------|:----------|:-----|
-| getMove | /         | FEN  |
-
-__Listen__
-
-| Channel   | Namespace | Data     |
-|:----------|:----------|:---------|
-| getMove   | /         | Move     |
-| rejectMove| /         | rejection|
+| Methode    | Parameter               | Beschreibung                                                                                              |
+|:-----------|:------------------------|:----------------------------------------------------------------------------------------------------------|
+| invitation | FEN, ID_E               | Zum Einladen von einem gegnerischen Spieler                                                               |
+| reject     |                         | Zum Ablehnen von Zügen, Bildern und Einladungen                                                           |
+| receive    | FEN, ID_G, Color, Turns | Zum teilen und/oder bestätigen von Zügen und Bildern                                                      |
+| end        | Reason, ID_G, ID_S      | Zum beenden von Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate

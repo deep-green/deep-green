@@ -215,7 +215,7 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 #### 3.2.1 Softwarearchitekturdiagramm
 
-![Softwarearchitektur](/images/swarch.png "Softwarearchitektur")
+![Softwarearchitektur](/images/softwarearchitekturdiagramm.png "Softwarearchitektur")
 
 #### 3.2.2 Google Assistant Strukturdiagramm
 

@@ -4,9 +4,14 @@
 
 ### Beteiligte Autoren
 
-* Tobias Koppmann
-* Marti Stuwe
-* Alexander Scharow
+* [Luis Deutsch](https://github.com/Luisnator)
+* [Tobias Koppmann](https://github.com/T08145)
+* [Nicola Kühnert](https://github.com/NicolaKuehnert)
+* [Torsten Niemeier](https://github.com/ToWiNi)
+* [Phillip Penner](https://github.com/Phillip51)
+* [Patrick Reinke](https://github.com/reinkepatrick)
+* [Alexander Scharow](https://github.com/TwentyOneLunex)
+* [Marti Stuwe](https://github.com/martistuwe)
 
 ## 1 Einführung
 
@@ -42,18 +47,21 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 * Benutzer kann sich registrieren
 * Als Gast spielbar
 
-### Use Cases
+### 2.2 Use Cases
 
-#### Startseite
+#### 2.2.1 Startseite
 ![usecase_start](/images/usecases/deep-green_start.png "Startseite")
 
-#### Hauptmenü
+#### 2.2.2 Hauptmenü
 ![usecase_hauptmenu](/images/usecases/deep-green_hauptmenu.png "Hauptmenü")
 
-#### Im Spiel (ohne Sprachsteuerung)
+#### 2.2.3 Stellungseditor (Abzweig aus 'Neues Spiel starten')
+![usecase_stellung](/images/usecases/deep-green_stellungseditor.png "Stellungseditor")
+
+#### 2.2.4 Im Spiel (ohne Sprachsteuerung)
 ![usecase_ingame](/images/usecases/deep-green_ingame.png "Im Spiel")
 
-#### Im Spiel (Sprachsteuerung)
+#### 2.2.5 Im Spiel (Sprachsteuerung)
 ![usecase_voice](/images/usecases/deep-green_ingameVoice.png "Sprachsteuerung")
 
 ### 2.2 Nicht-funktionale Anforderungen
@@ -75,7 +83,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ### 2.3 Graphische Benutzerschnittstelle
 
-#### Desktop
+#### 2.3.1 Desktop
 
 ![Hauptmenü und Login](/images/Mockups/Login_MainMenue.png "Hauptmenü und Login")
 
@@ -96,7 +104,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
     - User Stories mit Akzeptanzkritierien
     - Optional: Name (oder ID) und Priorität ("Muss", "Soll", "Kann")
 
-#### Frontend
+#### 2.4.1 Frontend
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
@@ -115,7 +123,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 | Zuschauen | Zuschauer | einem Spiel zuschauen können |  ich selbst entscheide, was ich sehen kann | der Zuschauermodus geladen wurde und das Spielgeschehen angezeigt wird | Can
 | Ausloggen | Spieler | mich mit meinem Account ausloggen können | jemand anderes mit seinem Account spielen kann | der Spieler sich ausloggen kann und wider auf der Startseite ist | Can
 
-#### Bilderkennung
+#### 2.4.2 Bilderkennung
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
@@ -126,7 +134,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ![schachnotation](/images/schachnotation.jpg "Schachnotation")
 
-#### Sprachsteuerung
+#### 2.4.3 Sprachsteuerung
 | **Name**| **Als**... |   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
 | Im Hauptmenü |
@@ -147,15 +155,15 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 | Speicherabfrage | Spieler | beim beenden des Spiels gefragt werden, ob ich die Partie speichern möchte wenn kein Spieler verloren hat | ich über eine Spracheingabe bestimmen kann, dass die Partie gespeichert werden soll | beim beenden des Spiels gefragt wird wird, ob das Spiel gespeichert werden soll | Must
 | Gewinner durchsagen | Spieler | durch eine Sprachausgabe hören, wer gewonnen hat | ich über den Ausgang den Spiels bescheid weiß | eine Sprachausgabe den Gewinner bestimmt | Must
 
-#### Backend
+#### 2.4.4 Backend
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
 |Zug prüfen|Spieler|meine Züge auf Korrektheit geprüft werden|die Spielregeln des Spiels eingehalten werden|die Züge korrekt auf Gültigkeit geprüft werden| Must
 |Spielende prüfen|Spieler|die Spielsituation bewertet|das Ende des Spiels (Gewinn/Verlust) erkannt wird|das Spielende korrekt erkannt wird| Must
-|Frontend-Kommunikation 1|Frontend|Nachrichten an das Backend senden und von diesem empfangen|das Backend die Eingaben der Spieler erkennt und weitergibt|eine stabile Schnittstelle implementiert ist| Must
+|Frontend-Kommunikation|Frontend|Nachrichten an das Backend senden und von diesem empfangen|das Backend die Eingaben der Spieler erkennt und weitergibt|eine stabile Schnittstelle implementiert ist| Must
 
-#### Künstliche Intelligenz
+#### 2.4.5 Künstliche Intelligenz
 
 | **Name**| **Als**...|   ...**möchte ich**...   | ..., **sodass**... | **erfüllt wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------
@@ -169,21 +177,174 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 
 ### 3.1 Systemübersicht
 
-    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
-    - Schnittstellenbeschreibung
-    - Kommunikationsprotokolle, Datenformate
+#### 3.1.1 Systemarchitekturdiagramm
 
 ![Systemarchitektur](/images/sysArch.png "Systemarchitektur")
 
+#### 3.1.2 Schnittstellenbeschreibung
+Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-green/ki2)).  
+
+##### 3.1.2.1 Client
+
+| Methode    | Parameter                  | Beschreibung                                                                                                |
+|:-----------|:---------------------------|:------------------------------------------------------------------------------------------------------------|
+| invitation | FEN, ID_enemy              | Zum einladen von einem gegnerischen Spieler                                                                 |
+| reject     |                            | Zum ablehnen eines Zuges oder eines Bildes                                                                  |
+| receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes                                                 |
+| end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+
+__invitation__
+```json
+{
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "ID_enemy": "maxmustermann"
+}
+```
+
+__reject__
+```json
+{
+}
+```
+
+__receive__
+```json
+{
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "ID_game": 2,
+  "color": true,
+  "turns": [
+    "e2e4",
+    "c2c4"
+  ]
+}
+```
+
+__end__
+```json
+{
+  "reason": "connection lost",
+  "ID_game": 2,
+  "ID_player": "heinrichmustermann"
+}
+```
+
+##### 3.1.2.2 Backend
+
+| Methode    | Parameter                             | Beschreibung                                                                                              |
+|:-----------|:--------------------------------------|:----------------------------------------------------------------------------------------------------------|
+| makeMove   | FEN &#124; Move, ID_game, JWT-Token   | Zum tätigen eines Zuges                                                                                   |
+| rewind     | ID_game, JWT-Token, [turnCount]       | Zum rückgängig machen eines Zuges, optinale Angabe der Anzahl der Züge                                    |
+| reject     | JWT-Token                             | Zum ablehnen von Einladungen                                                                              |
+| image      | Image, color, JWT-Token               | Zum hochladen einer Spielsituation per Bild                                                               |
+| saveGame   | ID_game, JWT-Token                    | Zum speichern von Spielen                                                                                 |
+| newGame    | ID_enemy, color, JWT-Token, [FEN]     | Zum starten eines neuen Spiels                                                                            |
+| accept     | ID_game, JWT-Token                    | Zum annehmen eines Spiels                                                                                 |
+| saveTurn   | ID_game, turn, JWT-Token              | Zum markieren eines Zuges                                                                                 |
+| end        | reason, ID_game, JWT-Token            | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+
+__makeMove__
+```json
+{
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "ID_game": 2,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
+}
+```
+
+__rewind__
+```json
+{
+  "ID_game": 2,
+  "turnCount": 4,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+__image__
+```json
+{
+  "image": "fileserver/images/image.png",
+  "color": true,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+__saveGame__
+```json
+{
+  "ID_game": 2,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
+}
+```
+
+__newGame__
+```json
+{
+  "ID_enemy": "maxmustermann",
+  "color": false,
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+__accept__
+```json
+{
+  "ID_game": 2,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
+}
+```
+
+__saveTurn__
+```json
+{
+  "ID_game": 2,
+  "turn": 4,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"   
+}
+```
+
+__end__
+```json
+{
+  "reason": "draw",
+  "ID_game": 2,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
+}
+```
+
+#### 3.1.3 Kommunikationsprotokolle, Datenformate
+
+__Kommunikationsprotokolle:__
+Es gibt zwei gängige Protokolle zur Übermittlung von Daten zwischen Frontend und Backend.
+- _CECP - Chess Engine Communication Protocol_
+- _UCI - Universal Chess Interface_
+
+__Datenformate:__
+Als relevante Datenformate werden die gängigen Standards für Schachsoftware verwendet.
+- _FEN - Forsyth-Edwards Notation_ zur Darstellung der Spielsituation auf einem Spielbrett
+- _Elo Zahlen_ zur Klassifizierung der Spieler nach ihrer Stärke
+
 ### 3.2 Softwarearchitektur
 
-    - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
+#### 3.2.1 Softwarearchitekturdiagramm
+
+![Softwarearchitektur](/images/softwarearchitekturdiagramm.png "Softwarearchitektur")
+
+#### 3.2.2 Google Assistant Strukturdiagramm
+
+![googleAssistantStrukturdiagramm](/images/googleAssistantStrukturdiagramm.png "Google Assistant Strukturdiagramm")
 
 ### 3.3 Datenmodell
 
-    - Konzeptionelles Analyseklassendiagramm
+![Analyse-Klassendiagramm](/images/analyseklassendiagramm.png "Analyse-Klassendiagramm")
 
 ### 3.4 Abläufe
+
+#### 3.4.1 Zustandsdiagramm
+
+![zustands](/images/Zustand_deep_green.png "Zustandsdiagramm")
 
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
@@ -191,6 +352,10 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 ### 3.5 Entwurf
 
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
+
+#### 3.5.1 CV Zustandsdiagramm zur Bilderkennung
+
+![CV_Zustandsdiagramm](/images/cv_zustandsdiagramm.png "CV Zustandsdiagramm")
 
 ## 4 Projektorganisation
 
@@ -200,11 +365,60 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
     - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
+#### 4.1.1 Allgemein  
+Framework(s) / Bibliothek(en): 
+* [socket.io](https://socket.io/) - Real-time bidirektionale und eventbasierte Kommunikation
+
+#### 4.1.2 KI
+Programmiersprache(n): 
+* [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
+* [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache 
+* [Rust](https://www.rust-lang.org/en-US/) - eine moderne Systemprogrammiersprache  
+ 
+Framework(s): 
+* [Tensorflow](https://www.tensorflow.org/) - ein Open-Source Framework für das maschinelle Lernen
+* [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
+* [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module 
+* [Jest](https://facebook.github.io/jest/) - Ein Unit-Test-Framework für Javascript
+
+Methode(n) und Algorithmen:
+* [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus) - ein Algorithmus zu Filterung von optimalen Spielzügen mit Tiefensuche
+* [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen) - eine Methode des maschinellen Lernens zu trainierung das Handeln für eine maximale Belohnung 
+* [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz) - ein Algorithmus der ein Netz aus künstlichen Neuronen bildet zum erlernen von Handlungen
+
+#### 4.1.3 Backend / Zuggenerator
+Programmiersprache(n):
+* [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache 
+* [Rust](https://www.rust-lang.org/en-US/) - eine moderne Systemprogrammiersprache
+
+Framework(s):
+* [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
+* [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module
+* [mongoose](http://mongoosejs.com/) - Anbindung von mongoDB-Datenbanken an Node.js-Anwendungen
+* [rayon](https://crates.io/crates/rayon) - Eine Parallelisierungs-Bibliothek für Rust-Projekte
+* [Jest](https://facebook.github.io/jest/) - Ein Unit-Test-Framework für Javascript
+
+Methode(n) und Algorithmen: -
+
+#### 4.1.4 Datenbank
+Framework(s) / Bibliothek(en):
+* [mongoDB](https://www.mongodb.com/) - ein dokumentenorientiertes Datenbank-System
+
+#### 4.1.5 CV/Bilderkennung
+Programmiersprache(n): 
+* [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
+* [C++](https://de.wikipedia.org/wiki/C%2B%2B/) - eine genormte Programmiersprache 
+ 
+Framework(s)/Bibliotheken: 
+* [OpenCV](https://opencv.org/) - Algorithmenbibliothek für Computer Vision
+
 
 ### 4.2 Verantwortlichkeiten
 
-    - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
-    - Rollendefinition und Zuordnung
+#### 4.2.1 Rollendefinitionen
+
+#### 4.2.2 Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2 und Rollen
+
 
 ### 4.3 Grober Projektplan
 
@@ -215,33 +429,58 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 ### 5.1 Glossar
     - Definitionen, Abkürzungen, Begriffe
 
-##### AWS
+__AWS__  
 Amazon Web Services, Cloud-Computing-Anbieter
 
-##### Gast
+__CECP - Chess Engine Communication Protocol__  
+Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
+
+__Elo-Zahl__  
+Eine Bewertungsfunktion
+
+__Engine__  
+Menge aller notwendigen Services, um das Spiel lauffähig zu machen und mit dem Frontend zu kommunizieren
+
+__FIDE - Fédération Internationale des Échecs (französisch: Internationaler Schachverband)__  
+Weltschachbund, nach dessen regularien weltweit Turniere abgehalten werden und die Weltrangliste geführt wird
+
+__Gast__  
 Ein nicht registriertes Individuum, das an einer Partie teilhaben möchte.
 
-##### Gegnertyp
+__Gegnertyp__  
 Als Gegnertyp zählt entweder die KI oder ein Spieler.
 
-##### KI / AI
+__KI / AI__  
 Künstliche Intelligenz / Artificial Intelligence
 Teilgebiet der Informatik das sich mit der Automatisierung intelligenten Verhaltens und dem Maschinenlernen befasst.
 
-##### Matchmaking
+__ML - Maschinelles Lernen / Machine Learning__  
+Ein Konzept zum lernen aus Erfahrungen und Beispielen. Ein Teilgebiet der künstlichen Intelligenz.
+
+__Matchmaking__  
 Ein System um Spieler mit ähnlichen Fähigkeiten zusammen spielen zu lassen.
 
-##### Spieler
+__Spieler__  
 Ein Benutzer mit der Intention ein Spiel zu spielen.
 
-##### User / Benutzer
-Ein, bei Deep-Green registriertes, Individuum ohne die direkte Intention ein Spiel zu spielen.
+__UCI - Universal Chess Interface__  
+Ein standardisiertes Protokoll zum Datenaustausch zwischen Schach-Frontend und -Backend
 
-##### Zuschauer
+__User / Benutzer__  
+Ein bei Deep-Green registriertes Individuum ohne die direkte Intention ein Spiel zu spielen.
+
+__Zuggenerator__    
+Ein Dienst der Engine, der aus der aktuellen Stellung der Spielfiguren auf dem Spielbrett alle möglichen, regelkonformen Züge berechnet
+
+__Zuschauer__  
 Ein Benutzer der das Spielgeschehen nur betrachten möchte.
 
 ### 5.2 Referenzen
-
-    - Handbücher, Gesetze
+- [CECP - Chess Engine Protocol](https://www.gnu.org/software/xboard/engine-intf.html)
+- [UCI - Universal Chess Interface](http://www.shredderchess.de/schach-info/features/uci-universal-chess-interface.html)
+- [FEN - Forsyth Edwards Notation](https://de.wikipedia.org/wiki/Forsyth-Edwards-Notation)
+- [Weltschachverband (FIDE)](https://www.fide.com/)
+- [FIDE Schachregeln](http://www.fide.com/fide/handbook.html?id=32&view=category)
+- [FIDE Elo-Zahl Berechnung](https://www.fide.com/fide/handbook.html?id=197&view=article)
 
 ### 5.3 Index

@@ -212,7 +212,7 @@ __receive__
 {
   "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
   "ID_game": 2,
-  "color": true,
+  "color": false,
   "turns": [
     "e2e4",
     "c2c4"
@@ -265,7 +265,7 @@ __image__
 ```json
 {
   "image": "fileserver/images/image.png",
-  "color": true,
+  "color": false,
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
 }
 ```

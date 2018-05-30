@@ -190,7 +190,7 @@ Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-g
 |:-----------|:---------------------------|:------------------------------------------------------------------------------------------------------------|
 | invitation | FEN, ID_enemy              | Zum einladen von einem gegnerischen Spieler                                                                 |
 | reject     |                            | Zum ablehnen eines Zuges oder eines Bildes                                                                  |
-| receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes                                                 |
+| receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes (color: false = white, true = black)                                                 |
 | end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
 __invitation__

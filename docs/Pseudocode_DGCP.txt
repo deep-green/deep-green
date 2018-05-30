@@ -1,0 +1,36 @@
+Client:
+	makeMove(FEN | Move, GID)
+		send Move | send end
+		await recieve
+	
+	newGame(FEN, PID/AI | PID/PID, Color)
+		send invitation to server
+		await recieve / reject
+		
+	reject
+		answer send to server
+			server sends to awaiter
+
+	accept(GID, PID)
+		answer send to server
+			server sends recieve to awaiter
+
+	image (picture, Color)
+		awaits recieve
+		
+	saveGame(GID, PID, Turn)
+	
+	saveTurn(GID, Turn)
+	
+	end(GID, PID, reason)
+	
+	rewind(GID, [TurnCount])
+
+Server:
+	recieve(FEN , GID, Color)
+		
+	invitation(FEN, PID)
+	
+	reject
+		
+	end(GID, PID, reason)

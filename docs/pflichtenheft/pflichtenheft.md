@@ -355,6 +355,12 @@ __Protokoll:__
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
 
+#### 3.4.2 Aktivitätsdiagramm
+
+__Protokoll:__
+
+![aktivitäts](/images/AktivitätsdiagrammProtokoll.png "Aktivitätsdiagramm_Protokoll")
+
 ### 3.5 Entwurf
 
     - Detaillierte UML-Diagramme für relevante Softwarebausteine

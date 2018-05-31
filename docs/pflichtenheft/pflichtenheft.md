@@ -184,7 +184,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 #### 3.1.2 Schnittstellenbeschreibung
 Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-green/ki2)).  
 
-##### 3.1.2.1 Client
+##### 3.1.2.1 Backend &#8667; Client
 
 | Methode    | Parameter                  | Beschreibung                                                                                                |
 |:-----------|:---------------------------|:------------------------------------------------------------------------------------------------------------|
@@ -229,7 +229,7 @@ __end__
 }
 ```
 
-##### 3.1.2.2 Backend
+##### 3.1.2.2 Client &#8667; Backend
 
 | Methode    | Parameter                             | Beschreibung                                                                                              |
 |:-----------|:--------------------------------------|:----------------------------------------------------------------------------------------------------------|

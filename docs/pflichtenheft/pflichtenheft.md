@@ -325,6 +325,19 @@ __Definition für *reason*__
 |"con_lost"   | Verbindungsabbruch zum anderen Spieler |
 |"player_end" | Verbindungsabbruch zum anderen Spieler |
 
+##### 3.1.2.4 Ports 
+__URL:__ ec2-54-93-171-91.eu-central-1.compute.amazonaws.com
+
+__Ports__
+
+| Port        | Beschreibung |
+|:-----------:|:-------------|
+| __4999__    | Backend      |
+| __5000__    | KI2          |
+| __6500__    | Alexa        |
+| __6501__    | Alexa        |
+
+
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 
 __Kommunikationsprotokolle:__

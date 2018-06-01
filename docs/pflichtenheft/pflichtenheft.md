@@ -348,9 +348,13 @@ __Frontend:__
 
 ![zustands](/images/Zustand_deep_green.png "Zustandsdiagramm")
 
-__Protokoll:__
+__Programmzustandsdiagramm:__
 
-![zustands](/images/ZustandProtokoll.png "Zustandprotokoll")
+![zustands](/images/ZustandProgramm.png "Zustandprotokoll")
+
+__Spielzustandsdiagramm:__
+
+![zustands](/images/ZustandSpiel.png "Zustandprotokoll")
 
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases

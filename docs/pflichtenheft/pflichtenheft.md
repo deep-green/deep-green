@@ -193,16 +193,6 @@ Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-g
 | receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes (color: false = white, true = black)                                                 |
 | end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
-__Definition für *reason*__
-
-| Wert        | Bedeutung                              |
-|:------------|:---------------------------------------|
-|"won"        | Spiel wurde vom Empfänger gewonnen     |
-|"lost"       | Spiel wurde vom Empfänger verloren     |
-|"draw"       | Spiel endet unentschieden              |
-|"con_lost"   | Verbindungsabbruch zum anderen Spieler |
-|"player_end" | Verbindungsabbruch zum anderen Spieler |
-
 __invitation__
 ```json
 {
@@ -323,6 +313,17 @@ __end__
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
 }
 ```
+##### 3.1.2.3 Definition von Variablen
+
+__Definition für *reason*__
+
+| Wert        | Bedeutung                              |
+|:------------|:---------------------------------------|
+|"won"        | Spiel wurde vom Empfänger gewonnen     |
+|"lost"       | Spiel wurde vom Empfänger verloren     |
+|"draw"       | Spiel endet unentschieden              |
+|"con_lost"   | Verbindungsabbruch zum anderen Spieler |
+|"player_end" | Verbindungsabbruch zum anderen Spieler |
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 

@@ -353,10 +353,26 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 #### 3.4.1 Zustandsdiagramm
 
+__Frontend:__
+
 ![zustands](/images/Zustand_deep_green.png "Zustandsdiagramm")
+
+__Programmzustandsdiagramm:__
+
+![zustands](/images/ZustandProgramm.png "Zustandprotokoll")
+
+__Spielzustandsdiagramm:__
+
+![zustands](/images/ZustandSpiel.png "Zustandprotokoll")
 
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+
+#### 3.4.2 Aktivitätsdiagramm
+
+__Protokoll:__
+
+![aktivitäts](/images/AktivitätsdiagrammProtokoll.png "Aktivitätsdiagramm_Protokoll")
 
 ### 3.5 Entwurf
 

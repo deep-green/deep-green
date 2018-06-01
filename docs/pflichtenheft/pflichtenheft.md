@@ -193,6 +193,15 @@ Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-g
 | receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes (color: false = white, true = black)                                                 |
 | end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
+__Definition für *reason*__
+| Wert        | Bedeutung                              |
+|:------------|:---------------------------------------|
+|"won"        | Spiel wurde vom Empfänger gewonnen     |
+|"lost"       | Spiel wurde vom Empfänger verloren     |
+|"draw"       | Spiel endet unentschieden              |
+|"con_lost"   | Verbindungsabbruch zum anderen Spieler |
+|"player_end" | Verbindungsabbruch zum anderen Spieler |
+
 __invitation__
 ```json
 {

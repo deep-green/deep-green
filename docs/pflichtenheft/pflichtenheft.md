@@ -194,6 +194,7 @@ Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-g
 | end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 
 __Definition für *reason*__
+
 | Wert        | Bedeutung                              |
 |:------------|:---------------------------------------|
 |"won"        | Spiel wurde vom Empfänger gewonnen     |

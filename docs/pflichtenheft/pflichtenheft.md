@@ -364,6 +364,101 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 ![Analyse-Klassendiagramm](/images/analyseklassendiagramm.png "Analyse-Klassendiagramm")
 
+#### 3.3.1 Datenbank
+
+MongoDB arbeitet mit Collections anstatt Tabellen und mit Dokumenten anstatt Datensätzen. Ein Euch sonst bekanntes DBMS hat Tabellen die Datensätze halten, MongoDB hat Collections die Dokumente halten.
+
+Name der DB auf dem Server: deepgreen
+
+##### 3.3.1.1 Collection: user
+
+Beschreibung: User die sich registriert haben.
+
+Dokument:
+
+| **field**| **datatype** | **Anmerkung**   |
+|:-----|:----------:|:-------------------|
+| _id | ObjectID | primary key |
+| username | String |  |
+| password | String |  |
+| elo | int32 | Initialwert: 1000 (?) |
+| (token) | (String) | Wird vielleicht verworfen |
+
+__Beispiele__
+```
+_id: 5b1a6733c795082083d25a52
+username: deep
+password: green
+elo: 1000
+```
+```
+_id: 5b1a679f40f70820836bea69
+username: lunex
+password: test
+elo: 2108
+```
+```
+_id: 5b1a9be191c3750ac2b64567
+username: "JaneDoe"
+password: "janedoe"
+elo: 1250
+```
+```
+_id: 5b1a9bf191c3750ac2b64568
+username: "JohnDoe"
+password: "johndoe"
+elo: 980
+```
+
+##### 3.3.1.2 Collection: games
+
+Beschreibung: Alle abgeschlossenen Spiele
+
+Dokument:
+
+| **field**| **datatype** | **Anmerkung**   |
+|:-----|:----------:|:-------------------|
+| _id | ObjectID | primary key |
+| fen | Strings in einem Array |  |
+| whiteID | String | Weißer Spieler, foreign key: user.username oder Gastname |
+| blackID | String | Schwarzer Spieler, foreign key: user.username oder Gastname |
+| winner | String |  |
+
+__Beispiel__
+```
+_id: 5b1a6b23c795082083d25a55
+fen:  0: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+      1: "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"
+      2: "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2"
+      3: "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"
+whiteID: "lunex"
+blackID: "deep"
+winner: "lunex"
+```
+
+##### 3.3.1.3 Collection: activeGames
+
+Beschreibung: Alle laufenden Spiele. Hier werden die Zuschauer festgehalten.
+
+Dokument:
+
+| **field**| **datatype** | **Anmerkung**   |
+|:-----|:----------:|:-------------------|
+| _id | ObjectID | primary key |
+| whiteID | String | Weißer Spieler, foreign key: user.username oder Gastname |
+| blackID | String | Weißer Spieler, foreign key: user.username oder Gastname |
+| viewer | Strings in einem Array |  |
+
+__Beispiel__
+```
+_id: 5b1a6c82c795082083d25a56
+whiteID: "lunex"
+blackID: "deep"
+viewers:  0: "JohnDoe"
+          1: "JaneDoe"
+          2: "Gast8054"
+```
+
 ### 3.4 Abläufe
 
 #### 3.4.1 Zustandsdiagramm

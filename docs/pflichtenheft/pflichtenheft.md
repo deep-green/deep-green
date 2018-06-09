@@ -382,7 +382,7 @@ Dokument:
 | username | String |  |
 | password | String |  |
 | elo | int32 | Initialwert: 1000 (?) |
-| (token) | (String) | Wird vielleicht verworfen |
+| token | String | JWT-Token als String gespeichert |
 
 __Beispiele__
 ```
@@ -390,24 +390,28 @@ _id: 5b1a6733c795082083d25a52
 username: deep
 password: green
 elo: 1000
+token: 
 ```
 ```
 _id: 5b1a679f40f70820836bea69
 username: lunex
 password: test
 elo: 2108
+token: 
 ```
 ```
 _id: 5b1a9be191c3750ac2b64567
 username: "JaneDoe"
 password: "janedoe"
 elo: 1250
+token: 
 ```
 ```
 _id: 5b1a9bf191c3750ac2b64568
 username: "JohnDoe"
 password: "johndoe"
 elo: 980
+token: 
 ```
 
 ##### 3.3.1.2 Collection: games

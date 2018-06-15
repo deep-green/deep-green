@@ -213,8 +213,8 @@ __receive__
   "ID_game": 2,
   "color": false,
   "turns": [
-    "e2e4",
-    "c2c4"
+    "e2-e4",
+    "c2-c4"
   ]
 }
 ```

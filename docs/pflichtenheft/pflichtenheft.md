@@ -189,8 +189,9 @@ Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-g
 |:-----------|:---------------------------|:------------------------------------------------------------------------------------------------------------|
 | invitation | FEN, ID_enemy              | Zum einladen von einem gegnerischen Spieler                                                                 |
 | reject     |                            | Zum ablehnen eines Zuges oder eines Bildes                                                                  |
-| receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes (color: false = white, true = black)                                                 |
+| receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes (color: false = white, true = black)            |
 | end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+| games      | [{ ID_game, FEN, elo }]    | Antwort auf 'getGames'; Beinhaltet alle aktiven Spiele |
 
 __invitation__
 ```json
@@ -228,6 +229,24 @@ __end__
 }
 ```
 
+__games__
+```json
+[
+  {
+    "ID_game": 1,
+    "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "elo": 1267
+  },
+  {
+    "ID_game": 2,
+    "FEN": "rnbqkbnr/ppp1pppp/3p4/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 1 0",
+    "elo": 1843
+  }
+]
+
+
+```
+
 ##### 3.1.2.2 Client &#8667; Backend
 
 | Methode    | Parameter                             | Beschreibung                                                                                              |
@@ -241,6 +260,8 @@ __end__
 | accept     | ID_game, JWT-Token                    | Zum annehmen eines Spiels                                                                                 |
 | saveTurn   | ID_game, turn, JWT-Token              | Zum markieren eines Zuges                                                                                 |
 | end        | reason, ID_game, JWT-Token            | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+| getGames   | -/-                                   | fordert alle aktiven, betrachtbaren Spiele an |
+| viewGame   | ID_game                               | abboniert das über ID_game vorgegebene Spiel |
 
 __makeMove__
 ```json
@@ -336,6 +357,22 @@ __Ports__
 | __5000__    | KI2          |
 | __6500__    | Alexa        |
 | __6501__    | Alexa        |
+
+
+__getGames__
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+__viewGame__
+```json
+{
+  "ID_game": 12,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
 
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate

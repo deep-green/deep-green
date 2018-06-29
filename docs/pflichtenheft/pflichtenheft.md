@@ -183,6 +183,30 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 #### 3.1.2 Schnittstellenbeschreibung
 Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-green/ki2)).  
 
+Übersicht der Funktionen (Hilfstabelle für Alex und Tobias)
+
+| **Funktion**| **Status** | **To do** | **Getestet?** | **Anmerkung** |
+|:-----|:----------:|:-------------------|:-------------------|
+| Backend -> Client |  |  |  |  |
+| invitation | geschrieben | muss vom dgconnector ins interface (alex), richtiges return value (alex) |  |  |
+| reject |  |  |  |  |
+| receive |  |  |  |  |
+| end |  |  |  |  |
+| games |  |  |  |  |
+|  |  |  |  |  |
+| Client -> Backend |  |  |  |  |
+| makeMove |  |  |  |  |
+| rewind |  |  |  |  |
+| reject |  |  |  |  |
+| image |  |  |  |  |
+| saveGame |  |  |  |  |
+| newGame |  |  |  |  |
+| accept |  |  |  |  |
+| saveTurn |  |  |  |  |
+| end |  |  |  |  |
+| getGames |  |  |  |  |
+| viewGames |  |  |  |  |  |
+
 ##### 3.1.2.1 Backend &#8667; Client
 
 | Methode    | Parameter                  | Beschreibung                                                                                                |

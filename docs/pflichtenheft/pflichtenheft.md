@@ -215,7 +215,7 @@ Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-g
 | reject     |                            | Zum ablehnen eines Zuges oder eines Bildes                                                                  |
 | receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes (color: false = white, true = black)            |
 | end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
-| games      | [{ ID_game, FEN, elo }]    | Antwort auf 'getGames'; Beinhaltet alle aktiven Spiele |
+| games      | [{ ID_game, FEN, elo }]    | Antwort auf 'getGames'; Beinhaltet alle aktiven Spiele, die aktuelle FEN-Notation und die die höchste ELO-Zahl der beiden Spieler |
 
 __invitation__
 ```json

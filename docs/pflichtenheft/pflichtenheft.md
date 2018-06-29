@@ -147,8 +147,7 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 | Spielzug ansagen | Spieler | durch eine Spracheingabe meinen Spielzug machen | über die Sprachsteuerung meinen Zug machen kann | ich über die Sprachsteuerung meinen Zug machen kann und der Gegner am Zug ist | Must
 | Feedback durchsagen | Spieler | durch eine Sprachausgabe hören, ob mein Zug gültig ist | ich weiß, dass mein Spielzug gültig ist und akzeptiert wurde | ich nach meinem Spielzug Feedback durchgesagt bekomme | Must
 | Gegenerzug durchsagen | Spieler | durch eine Sprachausgabe hören, welchen Zug der Gegner gemacht hat | ich weiß, welchen Zug der Gegner gemacht hat und, dass ich am Zug bin | ich den Gegnerzug durchgesagt bekomme und am Zug bin | Must
-| Spielerzug durchsagen | Spieler | durch eine Sprachausgabe hören, welcher Spieler am Zug ist | ich weiß, welcher Spieler am Zug ist | durch eine Sprachausgabe der momentane Spieler bestimmt wird | Must
-| Momentanen Spieler abfragen | Spieler | durch eine Spracheingabe erfahren, welcher Spieler am Zug ist | ich über eine Sprachausgabe diese Information gewinnen kann | durch eine Spracheingabe abgefragt werden kann, wer am Zug ist und eine Sprachausgabe die Antwort liefert | Must
+|  Momentanen Spieler abfragen | Spieler | durch eine Spracheingabe erfahren, welcher Spieler am Zug ist | ich weiß, welcher Spieler am Zug ist | durch eine Sprachausgabe der momentane Spieler ausgegeben wird | Must
 | Gegnerzug wiederholen | Spieler | durch eine Spracheingabe den letzten Gegnerzug abfragen | ich die Sprachsteuerung diese Information gewinnen kann | durch eine Spracheingabe der letzte Gegnerzug abgefragt kann und eine Antwort als Sprachausgabe zurückkommt | Must
 | Schach(matt) durchsagen | Spieler | durch eine Sprachausgabe hören, ob nach dem Spielzug der andere Spieler schach(matt) gesetzt worden ist | ich über die Sprachausgabe auf diese spielentscheidene Situation hingewiesen werde | nach dem Spielzug eine Sprachausgabe informiert, ob ein Spieler schach(matt) gesetzt worden ist | Must
 | Spielende ansagen | Spieler | durch eine Spracheingabe, das Spiel beenden können | ich über die Sprachsteuerung die Partie verlassen kann | das Spiel beendet ist und eine Sprachausgabe mir dieses bestätigt | Must
@@ -182,20 +181,199 @@ Die Übernahme einer definierten Spielsituation von einem realen Spielbrett, ist
 ![Systemarchitektur](/images/sysArch.png "Systemarchitektur")
 
 #### 3.1.2 Schnittstellenbeschreibung
-##### 3.1.2.1 Backend ←→ KI
 Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-green/ki2)).  
 
-__Emit__
+##### 3.1.2.1 Backend &#8667; Client
 
-| Channel | Namespace | Data |
-|:--------|:----------|:-----|
-| getMove | /         | FEN  |
+| Methode    | Parameter                  | Beschreibung                                                                                                |
+|:-----------|:---------------------------|:------------------------------------------------------------------------------------------------------------|
+| invitation | FEN, ID_enemy              | Zum einladen von einem gegnerischen Spieler                                                                 |
+| reject     |                            | Zum ablehnen eines Zuges oder eines Bildes                                                                  |
+| receive    | FEN, ID_game, color, turns | Zum teilen und/oder bestätigen eines Zuges und eines Bildes (color: false = white, true = black)            |
+| end        | reason, ID_game, ID_Player | Zum beenden eines Spielen, unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+| games      | [{ ID_game, FEN, elo }]    | Antwort auf 'getGames'; Beinhaltet alle aktiven Spiele |
 
-__Listen__
+__invitation__
+```json
+{
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "ID_enemy": "maxmustermann"
+}
+```
 
-| Channel | Namespace | Data |
-|:--------|:----------|:-----|
-| getMove | /         | Move |
+__reject__
+```json
+{
+}
+```
+
+__receive__
+```json
+{
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "ID_game": 2,
+  "color": false,
+  "turns": [
+    "e2-e4",
+    "c2-c4"
+  ]
+}
+```
+
+__end__
+```json
+{
+  "reason": "connection lost",
+  "ID_game": 2,
+  "ID_player": "heinrichmustermann"
+}
+```
+
+__games__
+```json
+[
+  {
+    "ID_game": 1,
+    "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "elo": 1267
+  },
+  {
+    "ID_game": 2,
+    "FEN": "rnbqkbnr/ppp1pppp/3p4/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 1 0",
+    "elo": 1843
+  }
+]
+
+
+```
+
+##### 3.1.2.2 Client &#8667; Backend
+
+| Methode    | Parameter                             | Beschreibung                                                                                              |
+|:-----------|:--------------------------------------|:----------------------------------------------------------------------------------------------------------|
+| makeMove   | FEN &#124; Move, ID_game, JWT-Token   | Zum tätigen eines Zuges                                                                                   |
+| rewind     | ID_game, JWT-Token, [turnCount]       | Zum rückgängig machen eines Zuges, optinale Angabe der Anzahl der Züge                                    |
+| reject     | JWT-Token                             | Zum ablehnen von Einladungen                                                                              |
+| image      | Image, color, JWT-Token               | Zum hochladen einer Spielsituation per Bild                                                               |
+| saveGame   | ID_game, JWT-Token                    | Zum speichern von Spielen                                                                                 |
+| newGame    | ID_enemy, color, JWT-Token, [FEN]     | Zum starten eines neuen Spiels                                                                            |
+| accept     | ID_game, JWT-Token                    | Zum annehmen eines Spiels                                                                                 |
+| saveTurn   | ID_game, turn, JWT-Token              | Zum markieren eines Zuges                                                                                 |
+| end        | reason, ID_game, JWT-Token            | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
+| getGames   | -/-                                   | fordert alle aktiven, betrachtbaren Spiele an |
+| viewGame   | ID_game                               | abboniert das über ID_game vorgegebene Spiel |
+
+__makeMove__
+```json
+{
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "ID_game": 2,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
+}
+```
+
+__rewind__
+```json
+{
+  "ID_game": 2,
+  "turnCount": 4,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+__image__
+```json
+{
+  "image": "fileserver/images/image.png",
+  "color": false,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+__saveGame__
+```json
+{
+  "ID_game": 2,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
+}
+```
+
+__newGame__
+```json
+{
+  "ID_enemy": "maxmustermann",
+  "color": false,
+  "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+__accept__
+```json
+{
+  "ID_game": 2,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
+}
+```
+
+__saveTurn__
+```json
+{
+  "ID_game": 2,
+  "turn": 4,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"   
+}
+```
+
+__end__
+```json
+{
+  "reason": "draw",
+  "ID_game": 2,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"  
+}
+```
+
+__getGames__
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+__viewGame__
+```json
+{
+  "ID_game": 12,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+##### 3.1.2.3 Definition von Variablen
+
+__Definition für *reason*__
+
+| Wert        | Bedeutung                              |
+|:------------|:---------------------------------------|
+|"won"        | Spiel wurde vom Empfänger gewonnen     |
+|"lost"       | Spiel wurde vom Empfänger verloren     |
+|"draw"       | Spiel endet unentschieden              |
+|"con_lost"   | Verbindungsabbruch zum anderen Spieler |
+|"player_end" | Verbindungsabbruch zum anderen Spieler |
+
+##### 3.1.2.4 Ports 
+__URL:__ ec2-54-93-171-91.eu-central-1.compute.amazonaws.com
+
+__Ports__
+
+| Port        | Beschreibung |
+|:-----------:|:-------------|
+| __4999__    | Backend      |
+| __8008__    | KI1          |
+| __5000__    | KI2          |
+| __6500__    | Alexa        |
+| __6501__    | Alexa        |
+
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
 
@@ -213,7 +391,7 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 #### 3.2.1 Softwarearchitekturdiagramm
 
-![Softwarearchitektur](/images/swarch.png "Softwarearchitektur")
+![Softwarearchitektur](/images/softwarearchitekturdiagramm.png "Softwarearchitektur")
 
 #### 3.2.2 Google Assistant Strukturdiagramm
 
@@ -221,16 +399,131 @@ Als relevante Datenformate werden die gängigen Standards für Schachsoftware ve
 
 ### 3.3 Datenmodell
 
-    - Konzeptionelles Analyseklassendiagramm
+![Analyse-Klassendiagramm](/images/analyseklassendiagramm.png "Analyse-Klassendiagramm")
+
+#### 3.3.1 Datenbank
+
+MongoDB arbeitet mit Collections anstatt Tabellen und mit Dokumenten anstatt Datensätzen. Ein Euch sonst bekanntes DBMS hat Tabellen die Datensätze halten, MongoDB hat Collections die Dokumente halten.
+
+Name der DB auf dem Server: deepgreen
+
+##### 3.3.1.1 Collection: user
+
+Beschreibung: User die sich registriert haben.
+
+Dokument:
+
+| **field**| **datatype** | **Anmerkung**   |
+|:-----|:----------:|:-------------------|
+| _id | ObjectID | primary key |
+| username | String |  |
+| password | String |  |
+| elo | int32 | Initialwert: 1000 (?) |
+| token | String | JWT-Token als String gespeichert |
+
+__Beispiele__
+```
+_id: 5b1a6733c795082083d25a52
+username: deep
+password: green
+elo: 1000
+token: 
+```
+```
+_id: 5b1a679f40f70820836bea69
+username: lunex
+password: test
+elo: 2108
+token: 
+```
+```
+_id: 5b1a9be191c3750ac2b64567
+username: "JaneDoe"
+password: "janedoe"
+elo: 1250
+token: 
+```
+```
+_id: 5b1a9bf191c3750ac2b64568
+username: "JohnDoe"
+password: "johndoe"
+elo: 980
+token: 
+```
+
+##### 3.3.1.2 Collection: games
+
+Beschreibung: Alle abgeschlossenen Spiele
+
+Dokument:
+
+| **field**| **datatype** | **Anmerkung**   |
+|:-----|:----------:|:-------------------|
+| _id | ObjectID | primary key |
+| fen | Strings in einem Array |  |
+| whiteID | String | Weißer Spieler, foreign key: user.username oder Gastname |
+| blackID | String | Schwarzer Spieler, foreign key: user.username oder Gastname |
+| winner | String |  |
+
+__Beispiel__
+```
+_id: 5b1a6b23c795082083d25a55
+fen:  0: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+      1: "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"
+      2: "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2"
+      3: "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"
+whiteID: "lunex"
+blackID: "deep"
+winner: "lunex"
+```
+
+##### 3.3.1.3 Collection: activeGames
+
+Beschreibung: Alle laufenden Spiele. Hier werden die Zuschauer festgehalten.
+
+Dokument:
+
+| **field**| **datatype** | **Anmerkung**   |
+|:-----|:----------:|:-------------------|
+| _id | ObjectID | primary key |
+| whiteID | String | Weißer Spieler, foreign key: user.username oder Gastname |
+| blackID | String | Weißer Spieler, foreign key: user.username oder Gastname |
+| viewer | Strings in einem Array |  |
+
+__Beispiel__
+```
+_id: 5b1a6c82c795082083d25a56
+whiteID: "lunex"
+blackID: "deep"
+viewers:  0: "JohnDoe"
+          1: "JaneDoe"
+          2: "Gast8054"
+```
 
 ### 3.4 Abläufe
 
 #### 3.4.1 Zustandsdiagramm
 
+__Frontend:__
+
 ![zustands](/images/Zustand_deep_green.png "Zustandsdiagramm")
+
+__Programmzustandsdiagramm:__
+
+![zustands](/images/ZustandProgramm.png "Zustandprotokoll")
+
+__Spielzustandsdiagramm:__
+
+![zustands](/images/ZustandSpiel.png "Zustandprotokoll")
 
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+
+#### 3.4.2 Aktivitätsdiagramm
+
+__Protokoll:__
+
+![aktivitäts](/images/AktivitätsdiagrammProtokoll.png "Aktivitätsdiagramm_Protokoll")
 
 ### 3.5 Entwurf
 
@@ -262,6 +555,7 @@ Framework(s):
 * [Tensorflow](https://www.tensorflow.org/) - ein Open-Source Framework für das maschinelle Lernen
 * [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
 * [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module 
+* [Jest](https://facebook.github.io/jest/) - Ein Unit-Test-Framework für Javascript
 
 Methode(n) und Algorithmen:
 * [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus) - ein Algorithmus zu Filterung von optimalen Spielzügen mit Tiefensuche

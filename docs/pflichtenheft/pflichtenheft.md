@@ -12,6 +12,7 @@
 * [Patrick Reinke](https://github.com/reinkepatrick)
 * [Alexander Scharow](https://github.com/TwentyOneLunex)
 * [Marti Stuwe](https://github.com/martistuwe)
+* [Julien Garb](https://github.com/GitJulienHub)
 
 ## 1 Einführung
 
@@ -391,7 +392,7 @@ __Definition für *reason*__
 |"con_lost"   | Verbindungsabbruch zum anderen Spieler |
 |"player_end" | Verbindungsabbruch zum anderen Spieler |
 
-##### 3.1.2.4 Ports 
+##### 3.1.2.4 Ports
 __URL:__ ec2-54-93-171-91.eu-central-1.compute.amazonaws.com
 
 __Ports__
@@ -402,7 +403,7 @@ __Ports__
 | __8008__    | KI1          |
 | __5000__    | KI2          |
 | __6500__    | Alexa        |
-| __6501__    | Alexa        |
+| __443__    | Alexa        |
 
 
 #### 3.1.3 Kommunikationsprotokolle, Datenformate
@@ -457,28 +458,28 @@ _id: 5b1a6733c795082083d25a52
 username: deep
 password: green
 elo: 1000
-token: 
+token:
 ```
 ```
 _id: 5b1a679f40f70820836bea69
 username: lunex
 password: test
 elo: 2108
-token: 
+token:
 ```
 ```
 _id: 5b1a9be191c3750ac2b64567
 username: "JaneDoe"
 password: "janedoe"
 elo: 1250
-token: 
+token:
 ```
 ```
 _id: 5b1a9bf191c3750ac2b64568
 username: "JohnDoe"
 password: "johndoe"
 elo: 980
-token: 
+token:
 ```
 
 ##### 3.3.1.2 Collection: games
@@ -572,29 +573,29 @@ __Protokoll:__
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
 #### 4.1.1 Allgemein  
-Framework(s) / Bibliothek(en): 
+Framework(s) / Bibliothek(en):
 * [socket.io](https://socket.io/) - Real-time bidirektionale und eventbasierte Kommunikation
 
 #### 4.1.2 KI
-Programmiersprache(n): 
+Programmiersprache(n):
 * [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
-* [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache 
+* [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache
 * [Rust](https://www.rust-lang.org/en-US/) - eine moderne Systemprogrammiersprache  
- 
-Framework(s): 
+
+Framework(s):
 * [Tensorflow](https://www.tensorflow.org/) - ein Open-Source Framework für das maschinelle Lernen
 * [Node.js®](https://nodejs.org/) - Javascript Runtime für den Server
-* [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module 
+* [neon-bindings](https://www.neon-bindings.com/) - Bindings für in Rust geschriebene Node.js-Module
 * [Jest](https://facebook.github.io/jest/) - Ein Unit-Test-Framework für Javascript
 
 Methode(n) und Algorithmen:
 * [MiniMax-Algorithmus](https://de.wikipedia.org/wiki/Minimax-Algorithmus) - ein Algorithmus zu Filterung von optimalen Spielzügen mit Tiefensuche
-* [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen) - eine Methode des maschinellen Lernens zu trainierung das Handeln für eine maximale Belohnung 
+* [Reinforcment Learning](https://de.wikipedia.org/wiki/Best%C3%A4rkendes_Lernen) - eine Methode des maschinellen Lernens zu trainierung das Handeln für eine maximale Belohnung
 * [Neuronale Netze](https://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz) - ein Algorithmus der ein Netz aus künstlichen Neuronen bildet zum erlernen von Handlungen
 
 #### 4.1.3 Backend / Zuggenerator
 Programmiersprache(n):
-* [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache 
+* [Javascript](http://ecma-international.org/) - eine dynamisch typisierte Skriptsprache
 * [Rust](https://www.rust-lang.org/en-US/) - eine moderne Systemprogrammiersprache
 
 Framework(s):
@@ -611,11 +612,11 @@ Framework(s) / Bibliothek(en):
 * [mongoDB](https://www.mongodb.com/) - ein dokumentenorientiertes Datenbank-System
 
 #### 4.1.5 CV/Bilderkennung
-Programmiersprache(n): 
+Programmiersprache(n):
 * [Python](https://www.python.org/) - eine leicht lesbare Programmiersprache
-* [C++](https://de.wikipedia.org/wiki/C%2B%2B/) - eine genormte Programmiersprache 
- 
-Framework(s)/Bibliotheken: 
+* [C++](https://de.wikipedia.org/wiki/C%2B%2B/) - eine genormte Programmiersprache
+
+Framework(s)/Bibliotheken:
 * [OpenCV](https://opencv.org/) - Algorithmenbibliothek für Computer Vision
 
 

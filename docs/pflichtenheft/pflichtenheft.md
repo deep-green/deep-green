@@ -205,7 +205,12 @@ Verbindung via [socket.io](#411-allgemein) ([Beispiel](https://github.com/deep-g
 | saveTurn |  |  |  |  |
 | end |  |  |  |  |
 | getGames |  |  |  |  |
-| viewGames |  |  |  |  |  |
+| viewGames |  |  |  |  |
+| guestLogin | done |  |  |  |
+|  |  |  |  |  |
+| Backend Funktionen |  |  |  |  |
+| newActiveGame | done |  |  |  |
+|  |  |  |  |  |  |
 
 ##### 3.1.2.1 Backend &#8667; Client
 
@@ -286,6 +291,7 @@ __games__
 | end        | reason, ID_game, JWT-Token            | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
 | getGames   | -/-                                   | fordert alle aktiven, betrachtbaren Spiele an |
 | viewGame   | ID_game                               | abboniert das über ID_game vorgegebene Spiel |
+| guestLogin | JWT-Token                             | als Gast einloggen |
 
 __makeMove__
 ```json

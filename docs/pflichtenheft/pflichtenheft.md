@@ -290,8 +290,8 @@ __games__
 | accept     | ID_game, JWT-Token                    | Zum annehmen eines Spiels                                                                                 |
 | saveTurn   | ID_game, turn, JWT-Token              | Zum markieren eines Zuges                                                                                 |
 | end        | reason, ID_game, JWT-Token            | Zum beenden eines Spiels unabhängig vom Grund (Gewonnen, Verloren, Unentschieden oder Verbindungsabbruch) |
-| getGames   | -/-                                   | fordert alle aktiven, betrachtbaren Spiele an |
-| viewGame   | ID_game                               | abboniert das über ID_game vorgegebene Spiel |
+| getGames   | JWT-Token                                  | fordert alle aktiven, betrachtbaren Spiele an |
+| viewGame   | ID_game, JWT-Token                               | abboniert das über ID_game vorgegebene Spiel |
 | guestLogin | JWT-Token                             | als Gast einloggen |
 
 __makeMove__

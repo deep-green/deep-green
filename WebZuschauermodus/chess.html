@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deep-Green Viewer Chanel</title>
+    <script src="socket.io.js"></script>
+    <script src="chess.js"></script>
+    <link rel="stylesheet"   href="chess.css">
+</head>
+<body>
+<div id="auswahl">
+    <form method="POST">
+        <b>Choose the Game to Watch:</b><br>
+        <select id="Spiel" size="5" onclick="this.visibility=false">
+           <!-- <option onclick="setGameNR(this.innerHTML)">1</option> -->
+        </select>
+    </form>
+</div>
+
+<div class="chessboard">
+    <!-- 1st row (black) -->
+    <div id="c11" class="white"></div>
+    <div id="c12" class="black"></div>
+    <div id="c13" class="white"></div>
+    <div id="c14" class="black"></div>
+    <div id="c15" class="white"></div>
+    <div id="c16" class="black"></div>
+    <div id="c17" class="white"></div>
+    <div id="c18" class="black"></div>
+    <!-- 2nd row -->
+    <div id="c21" class="black"></div>
+    <div id="c22" class="white"></div>
+    <div id="c23" class="black"></div>
+    <div id="c24" class="white"></div>
+    <div id="c25" class="black"></div>
+    <div id="c26" class="white"></div>
+    <div id="c27" class="black"></div>
+    <div id="c28" class="white"></div>
+    <!-- 3th row -->
+    <div id="c31" class="white"></div>
+    <div id="c32" class="black"></div>
+    <div id="c33" class="white"></div>
+    <div id="c34" class="black"></div>
+    <div id="c35" class="white"></div>
+    <div id="c36" class="black"></div>
+    <div id="c37" class="white"></div>
+    <div id="c38" class="black"></div>
+    <!-- 4th row -->
+    <div id="c41" class="black"></div>
+    <div id="c42" class="white"></div>
+    <div id="c43" class="black"></div>
+    <div id="c44" class="white"></div>
+    <div id="c45" class="black"></div>
+    <div id="c46" class="white"></div>
+    <div id="c47" class="black"></div>
+    <div id="c48" class="white"></div>
+    <!-- 5th row -->
+    <div id="c51" class="white"></div>
+    <div id="c52" class="black"></div>
+    <div id="c53" class="white"></div>
+    <div id="c54" class="black"></div>
+    <div id="c55" class="white"></div>
+    <div id="c56" class="black"></div>
+    <div id="c57" class="white"></div>
+    <div id="c58" class="black"></div>
+    <!-- 6th row -->
+    <div id="c61" class="black"></div>
+    <div id="c62" class="white"></div>
+    <div id="c63" class="black"></div>
+    <div id="c64" class="white"></div>
+    <div id="c65" class="black"></div>
+    <div id="c66" class="white"></div>
+    <div id="c67" class="black"></div>
+    <div id="c68" class="white"></div>
+    <!-- 7th row -->
+    <div id="c71" class="white"></div>
+    <div id="c72" class="black"></div>
+    <div id="c73" class="white"></div>
+    <div id="c74" class="black"></div>
+    <div id="c75" class="white"></div>
+    <div id="c76" class="black"></div>
+    <div id="c77" class="white"></div>
+    <div id="c78" class="black"></div>
+    <!-- 8th ow (white) -->
+    <div id="c81" class="black"></div>
+    <div id="c82" class="white"></div>
+    <div id="c83" class="black"></div>
+    <div id="c84" class="white"></div>
+    <div id="c85" class="black"></div>
+    <div id="c86" class="white"></div>
+    <div id="c87" class="black"></div>
+    <div id="c88" class="white"></div>
+
+    <!--
+    HTML codes für die Spielfigur Symbole:
+    &#9817 Bauer weiß
+    &#9814 Turm weiß
+    &#9816 Springer weiß
+    &#9815 Läufer weiß
+    &#9813 Dame weiß
+    &#9812 König weiß
+
+    &#9823 Bauer schwarz
+    &#9820 Turm schwarz
+    &#9822 Springer schwarz
+    &#9821 Läufer schwarz
+    &#9819 Dame schwarz
+    &#9818 König schwaz
+    -->
+</div>
+
+<div id="Historie">
+    <table>
+        <th>
+            Historie
+        </th>
+        <tr id ="his"></tr>
+    </table>
+
+</div>
+<br>
+<br>
+<br>
+<div id="erklaerung">
+    <b>Welches Symbol ist welche Figur?</b>
+    <br><br>
+    <table>
+        <tr>
+            <td> &#9817 Bauer weiß</td>
+            <td> &#9823 Bauer schwarz</td>
+        </tr>
+        <tr>
+            <td> &#9814 Turm weiß</td>
+            <td> &#9820 Turm schwarz</td>
+        </tr>
+        <tr>
+            <td> &#9816 Springer weiß</td>
+            <td> &#9822 Springer schwarz</td>
+        </tr>
+        <tr>
+            <td> &#9815 Läufer weiß</td>
+            <td> &#9821 Läufer schwarz</td>
+        </tr>
+        <tr>
+            <td> &#9813 Dame weiß</td>
+            <td>  &#9819 Dame schwarz</td>
+        </tr>
+        <tr>
+            <td> &#9812 König weiß</td>
+            <td> &#9818 König schwarz</td>
+        </tr>
+
+    </table>
+</div>
+
+</body>
+</html>

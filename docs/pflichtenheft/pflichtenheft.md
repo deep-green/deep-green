@@ -554,7 +554,7 @@ __Spielzustandsdiagramm:__
 
 __Protokoll:__
 
-![aktivitäts](/images/AktivitätsdiagrammProtokoll.png "Aktivitätsdiagramm_Protokoll")
+![aktivitäts](/images/AktivitaetsdiagrammProtokoll.png "Aktivitätsdiagramm_Protokoll")
 
 ### 3.5 Entwurf
 

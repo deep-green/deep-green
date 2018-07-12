@@ -237,39 +237,37 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>288</x>
+      <x>248</x>
       <y>48</y>
-      <w>96</w>
+      <w>136</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>JSON:
-Image, color, 
-JWT-Token</panel_attributes>
+    <panel_attributes>Bild, Identifizierungstoken
+Farbe des aktiven Spielers</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>288</x>
+      <x>232</x>
       <y>200</y>
-      <w>96</w>
+      <w>152</w>
       <h>48</h>
     </coordinates>
-    <panel_attributes>JSON:
-ID_enemy, color, 
-JWT-Token, [FEN]</panel_attributes>
+    <panel_attributes>Gegner, [Spielsituation]
+Farbe des aktiven Spielers, 
+Identifizierungstoken</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>288</x>
+      <x>264</x>
       <y>272</y>
-      <w>96</w>
+      <w>120</w>
       <h>32</h>
     </coordinates>
-    <panel_attributes>JSON:
-JWT-Token</panel_attributes>
+    <panel_attributes>Identifizierungstoken</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -277,22 +275,22 @@ JWT-Token</panel_attributes>
     <coordinates>
       <x>192</x>
       <y>56</y>
-      <w>112</w>
+      <w>72</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>192</x>
       <y>208</y>
-      <w>112</w>
+      <w>56</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -325,7 +323,7 @@ JWT-Token</panel_attributes>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-[valid]</panel_attributes>
+[invalid]</panel_attributes>
     <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
@@ -337,7 +335,7 @@ JWT-Token</panel_attributes>
       <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-[invalid]</panel_attributes>
+[valid]</panel_attributes>
     <additional_attributes>110.0;100.0;10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -365,14 +363,15 @@ JWT-Token</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>616</x>
-      <y>184</y>
-      <w>80</w>
-      <h>48</h>
+      <x>568</x>
+      <y>176</y>
+      <w>192</w>
+      <h>56</h>
     </coordinates>
-    <panel_attributes>JSON:
-FEN, ID_game, 
-color, turns</panel_attributes>
+    <panel_attributes>Spielsituation, 
+aktuelles Spiel, 
+Farbe des aktiven Spielers, 
+mögliche Züge aus aktueller Situation</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -381,10 +380,10 @@ color, turns</panel_attributes>
       <x>640</x>
       <y>136</y>
       <w>24</w>
-      <h>64</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -446,14 +445,13 @@ m2=[play]</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>288</x>
+      <x>272</x>
       <y>376</y>
-      <w>96</w>
+      <w>112</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>JSON:
-ID_game, 
-JWT-Token</panel_attributes>
+    <panel_attributes>aktualles Spiel, 
+Identifizierungstoken</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -472,24 +470,23 @@ JWT-Token</panel_attributes>
     <coordinates>
       <x>216</x>
       <y>280</y>
-      <w>88</w>
+      <w>64</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>288</x>
+      <x>272</x>
       <y>104</y>
-      <w>96</w>
+      <w>112</w>
       <h>56</h>
     </coordinates>
-    <panel_attributes>JSON:
-FEN | Move, 
-ID_game, 
-JWT-Token</panel_attributes>
+    <panel_attributes>Spielsituation | Zug, 
+aktualles Spiel, 
+Identifizierungstoken</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -497,11 +494,11 @@ JWT-Token</panel_attributes>
     <coordinates>
       <x>192</x>
       <y>112</y>
-      <w>112</w>
+      <w>96</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -519,11 +516,11 @@ JWT-Token</panel_attributes>
     <coordinates>
       <x>216</x>
       <y>384</y>
-      <w>88</w>
+      <w>72</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -638,55 +635,51 @@ JWT-Token</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>120</x>
+      <x>112</x>
       <y>824</y>
-      <w>96</w>
-      <h>56</h>
+      <w>112</w>
+      <h>48</h>
     </coordinates>
-    <panel_attributes>JSON:
-reason, 
-ID_game, 
-JWT-Token</panel_attributes>
+    <panel_attributes>Grund für Spielende, 
+aktuelles Spiel, 
+Identifizierungstoken</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>120</x>
+      <x>112</x>
       <y>704</y>
-      <w>96</w>
-      <h>56</h>
+      <w>112</w>
+      <h>48</h>
     </coordinates>
-    <panel_attributes>JSON:
-ID_game, 
-JWT-Token, 
-[turnCount]</panel_attributes>
+    <panel_attributes>aktuelles Spiel, 
+Identifizierungstoken, 
+[Anzahl Züge]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>120</x>
+      <x>112</x>
       <y>600</y>
-      <w>96</w>
+      <w>112</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>JSON:
-ID_game, 
-JWT-Token</panel_attributes>
+    <panel_attributes>aktuelles Spiel, 
+Identifizierungstoken</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>120</x>
+      <x>112</x>
       <y>496</y>
-      <w>96</w>
+      <w>112</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>JSON:
-ID_game, turn, 
-JWT-Token</panel_attributes>
+    <panel_attributes>aktuelles Spiel, Zug, 
+Identifizierungstoken</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -703,23 +696,23 @@ JWT-Token</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
+      <x>216</x>
       <y>504</y>
-      <w>416</w>
+      <w>408</w>
       <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>500.0;120.0;450.0;120.0;450.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>490.0;120.0;440.0;120.0;440.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
       <x>608</x>
       <y>592</y>
-      <w>96</w>
+      <w>48</w>
       <h>32</h>
     </coordinates>
-    <panel_attributes>Modify Database</panel_attributes>
+    <panel_attributes>OK</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -736,13 +729,13 @@ JWT-Token</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
+      <x>216</x>
       <y>608</y>
-      <w>416</w>
+      <w>408</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>500.0;10.0;450.0;10.0;450.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>490.0;10.0;440.0;10.0;440.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -769,26 +762,25 @@ JWT-Token</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
+      <x>216</x>
       <y>840</y>
-      <w>416</w>
+      <w>408</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>500.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>490.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>664</x>
-      <y>888</y>
-      <w>96</w>
-      <h>56</h>
+      <x>648</x>
+      <y>896</y>
+      <w>112</w>
+      <h>48</h>
     </coordinates>
-    <panel_attributes>JSON:
-reason, 
-ID_game, 
-ID_Player</panel_attributes>
+    <panel_attributes>Grund für Spielende, 
+aktuelles Spiel, 
+Gegner</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -797,10 +789,10 @@ ID_Player</panel_attributes>
       <x>680</x>
       <y>840</y>
       <w>48</w>
-      <h>64</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>40.0;60.0;40.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>40.0;70.0;40.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -818,10 +810,21 @@ ID_Player</panel_attributes>
     <coordinates>
       <x>120</x>
       <y>912</y>
-      <w>560</w>
+      <w>544</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;30.0;680.0;30.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;660.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>616</y>
+      <w>432</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>520.0;10.0;520.0;140.0;10.0;140.0</additional_attributes>
   </element>
 </diagram>

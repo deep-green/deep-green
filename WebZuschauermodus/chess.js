@@ -26,12 +26,13 @@ Beispielausgabe bei socket.on("games")
 ]
  */
 socket.on('games', function (data) {
+    console.log("von Server");
+    document.getElementById("Spiel").innerHTML='';
     for(object of data){
         if(object.hasOwnProperty("_id")){
             document.getElementById("Spiel").innerHTML=document.getElementById("Spiel").innerHTML+'<option onclick=\"setGameNR(this.innerHTML)">'+object._id+"</option>";
         }
     }
-
 });
 /*
 Beispielausgabe bei socket.on("recive")
@@ -48,11 +49,10 @@ Beispielausgabe bei socket.on("recive")
 socket.on("receive", function (data) {
    console.log(data);
     var historie;
-   for(object in data){
-       fen=object.fen;
+       fen=data.FEN;
        console.log(fen);
-       historie=object.turns;
-   }
+       historie=data.turns;
+
     gesammt=gesammt+"\n"+historie;
     document.getElementById("his").innerHTML = gesammt;
 
@@ -62,7 +62,7 @@ socket.on("receive", function (data) {
 function setGameNR(nummer){
     gameNR=nummer;
     console.log(gameNR);
-    socket.emit("viewGame",{"id": gameNR});
+    socket.emit('viewGame',{ID_game: gameNR, token: "viewer"});
 }
 
 
@@ -443,7 +443,6 @@ function clear() {
 }
 
 window.onload = function () {
-
     toHTML();
 
 }

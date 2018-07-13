@@ -28,6 +28,7 @@ Beispielausgabe bei socket.on("games")
 socket.on('games', function (data) {
     console.log("von Server");
     document.getElementById("Spiel").innerHTML='';
+    gesammt="";
     for(object of data){
         if(object.hasOwnProperty("_id")){
             document.getElementById("Spiel").innerHTML=document.getElementById("Spiel").innerHTML+'<option onclick=\"setGameNR(this.innerHTML)">'+object._id+"</option>";
@@ -63,6 +64,7 @@ function setGameNR(nummer){
     gameNR=nummer;
     console.log(gameNR);
     socket.emit('viewGame',{ID_game: gameNR, token: "viewer"});
+    gesammt="";
 }
 
 
